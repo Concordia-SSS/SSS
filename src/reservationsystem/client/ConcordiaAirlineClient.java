@@ -11,6 +11,8 @@ import java.util.Map;
 import jline.ArgumentCompletor;
 import jline.ConsoleReader;
 import jline.SimpleCompletor;
+import reservationsystem.impl.AirportImpl;
+import reservationsystem.impl.GeneralFlightImpl;
 import reservationsystem.impl.UserImpl;
 
 public class ConcordiaAirlineClient {
@@ -29,6 +31,7 @@ public class ConcordiaAirlineClient {
         }
     };
 
+    // Define maps here as a database.
     private static final Map<String, UserImpl> usersMap;
     static {
         usersMap = new HashMap<String, UserImpl>();
@@ -42,6 +45,31 @@ public class ConcordiaAirlineClient {
         tmp.setMd5Pwd("wu");
         tmp.setUserType(RealUserType.USER.value);
         usersMap.put("xing", tmp);
+    }
+
+    private static final Map<String, AirportImpl> airports;
+    static {
+        airports = new HashMap<String, AirportImpl>();
+        AirportImpl tmp = new AirportImpl();
+        tmp.setAbbr("YUL");
+        tmp.setName("Montreal");
+        airports.put(tmp.getAbbr(), tmp);
+        tmp = new AirportImpl();
+        tmp.setAbbr("JFK");
+        tmp.setName("New York");
+        airports.put(tmp.getAbbr(), tmp);
+    }
+
+    private static final Map<String, GeneralFlightImpl> generalFlights;
+    static {
+        generalFlights = new HashMap<String, GeneralFlightImpl>();
+        GeneralFlightImpl tmp = new GeneralFlightImpl();
+        tmp.setFlightNo("CA001");
+        tmp.setArrivalTime("1130");
+        tmp.setDepartureTime("1000");
+        tmp.setFrom(airports.get("YUL"));
+        tmp.setTo(airports.get("JFK"));
+        generalFlights.put(tmp.getFlightNo(), tmp);
     }
 
     public static void main(String[] args) throws IOException {
@@ -78,6 +106,8 @@ public class ConcordiaAirlineClient {
                 if (loginUser.getUserType() == RealUserType.OPERATOR.value) {
                     if (line.equalsIgnoreCase("create general flight")) {
                         createGeneralFlight();
+                    } else if (line.equalsIgnoreCase("list general flights")) {
+                        listGeneralFlight();
                     } else {
                         out.println("No such command: \"" + line + "\"");
                         out.flush();
@@ -96,6 +126,20 @@ public class ConcordiaAirlineClient {
                 out.flush();
             }
         }
+
+    }
+
+    private static void listGeneralFlight() throws Exception {
+        for (GeneralFlightImpl gflight : generalFlights.values()) {
+            out.println("==Flight " + gflight.getFlightNo() + "==");
+            out.println("From: " + gflight.getFrom().getAbbr() + "(" + gflight.getFrom().getName() + ")");
+            out.println("To  : " + gflight.getTo().getAbbr() + "(" + gflight.getTo().getName() + ")");
+            out.println("Depart: " + gflight.getDepartureTime());
+            out.println("Arrive: " + gflight.getArrivalTime());
+            out.println("");
+        }
+        out.flush();
+        return;
 
     }
 

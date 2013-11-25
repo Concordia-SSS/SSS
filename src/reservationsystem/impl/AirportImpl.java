@@ -4,10 +4,8 @@ package reservationsystem.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -16,26 +14,24 @@ import reservationsystem.City;
 import reservationsystem.ReservationsystemPackage;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Airport</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '<em><b>Airport</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link reservationsystem.impl.AirportImpl#getCity <em>City</em>}</li>
- *   <li>{@link reservationsystem.impl.AirportImpl#getId <em>Id</em>}</li>
- *   <li>{@link reservationsystem.impl.AirportImpl#getName <em>Name</em>}</li>
- *   <li>{@link reservationsystem.impl.AirportImpl#getAbbr <em>Abbr</em>}</li>
+ * <li>{@link reservationsystem.impl.AirportImpl#getCity <em>City</em>}</li>
+ * <li>{@link reservationsystem.impl.AirportImpl#getId <em>Id</em>}</li>
+ * <li>{@link reservationsystem.impl.AirportImpl#getName <em>Name</em>}</li>
+ * <li>{@link reservationsystem.impl.AirportImpl#getAbbr <em>Abbr</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @generated
  */
 public class AirportImpl extends MinimalEObjectImpl.Container implements Airport {
     /**
-     * The cached value of the '{@link #getCity() <em>City</em>}' reference.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getCity() <em>City</em>}' reference. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getCity()
      * @generated
      * @ordered
@@ -43,9 +39,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected City city;
 
     /**
-     * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -53,9 +48,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected static final int ID_EDEFAULT = 0;
 
     /**
-     * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getId() <em>Id</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @see #getId()
      * @generated
      * @ordered
@@ -63,9 +57,9 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected int id = ID_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -73,9 +67,9 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected static final String NAME_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getName() <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getName()
      * @generated
      * @ordered
@@ -83,9 +77,9 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected String name = NAME_EDEFAULT;
 
     /**
-     * The default value of the '{@link #getAbbr() <em>Abbr</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The default value of the '{@link #getAbbr() <em>Abbr</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getAbbr()
      * @generated
      * @ordered
@@ -93,9 +87,9 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected static final String ABBR_EDEFAULT = null;
 
     /**
-     * The cached value of the '{@link #getAbbr() <em>Abbr</em>}' attribute.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * The cached value of the '{@link #getAbbr() <em>Abbr</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc
+     * -->
+     * 
      * @see #getAbbr()
      * @generated
      * @ordered
@@ -103,17 +97,17 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     protected String abbr = ABBR_EDEFAULT;
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
-    protected AirportImpl() {
+    public AirportImpl() {
         super();
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -122,25 +116,26 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public City getCity() {
         if (city != null && city.eIsProxy()) {
-            InternalEObject oldCity = (InternalEObject)city;
-            city = (City)eResolveProxy(oldCity);
+            InternalEObject oldCity = (InternalEObject) city;
+            city = (City) eResolveProxy(oldCity);
             if (city != oldCity) {
                 if (eNotificationRequired())
-                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ReservationsystemPackage.AIRPORT__CITY, oldCity, city));
+                    eNotify(new ENotificationImpl(this, Notification.RESOLVE, ReservationsystemPackage.AIRPORT__CITY,
+                            oldCity, city));
             }
         }
         return city;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public City basicGetCity() {
@@ -148,42 +143,49 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public NotificationChain basicSetCity(City newCity, NotificationChain msgs) {
         City oldCity = city;
         city = newCity;
         if (eNotificationRequired()) {
-            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ReservationsystemPackage.AIRPORT__CITY, oldCity, newCity);
-            if (msgs == null) msgs = notification; else msgs.add(notification);
+            ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+                    ReservationsystemPackage.AIRPORT__CITY, oldCity, newCity);
+            if (msgs == null)
+                msgs = notification;
+            else
+                msgs.add(notification);
         }
         return msgs;
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setCity(City newCity) {
         if (newCity != city) {
             NotificationChain msgs = null;
             if (city != null)
-                msgs = ((InternalEObject)city).eInverseRemove(this, ReservationsystemPackage.CITY__AIRPORT, City.class, msgs);
+                msgs = ((InternalEObject) city).eInverseRemove(this, ReservationsystemPackage.CITY__AIRPORT,
+                        City.class, msgs);
             if (newCity != null)
-                msgs = ((InternalEObject)newCity).eInverseAdd(this, ReservationsystemPackage.CITY__AIRPORT, City.class, msgs);
+                msgs = ((InternalEObject) newCity).eInverseAdd(this, ReservationsystemPackage.CITY__AIRPORT,
+                        City.class, msgs);
             msgs = basicSetCity(newCity, msgs);
-            if (msgs != null) msgs.dispatch();
-        }
-        else if (eNotificationRequired())
-            eNotify(new ENotificationImpl(this, Notification.SET, ReservationsystemPackage.AIRPORT__CITY, newCity, newCity));
+            if (msgs != null)
+                msgs.dispatch();
+        } else if (eNotificationRequired())
+            eNotify(new ENotificationImpl(this, Notification.SET, ReservationsystemPackage.AIRPORT__CITY, newCity,
+                    newCity));
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public int getId() {
@@ -191,8 +193,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setId(int newId) {
@@ -203,8 +205,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getName() {
@@ -212,8 +214,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setName(String newName) {
@@ -224,8 +226,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public String getAbbr() {
@@ -233,8 +235,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     public void setAbbr(String newAbbr) {
@@ -245,8 +247,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -254,15 +256,16 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
         switch (featureID) {
             case ReservationsystemPackage.AIRPORT__CITY:
                 if (city != null)
-                    msgs = ((InternalEObject)city).eInverseRemove(this, ReservationsystemPackage.CITY__AIRPORT, City.class, msgs);
-                return basicSetCity((City)otherEnd, msgs);
+                    msgs = ((InternalEObject) city).eInverseRemove(this, ReservationsystemPackage.CITY__AIRPORT,
+                            City.class, msgs);
+                return basicSetCity((City) otherEnd, msgs);
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -275,15 +278,16 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public Object eGet(int featureID, boolean resolve, boolean coreType) {
         switch (featureID) {
             case ReservationsystemPackage.AIRPORT__CITY:
-                if (resolve) return getCity();
+                if (resolve)
+                    return getCity();
                 return basicGetCity();
             case ReservationsystemPackage.AIRPORT__ID:
                 return getId();
@@ -296,39 +300,39 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public void eSet(int featureID, Object newValue) {
         switch (featureID) {
             case ReservationsystemPackage.AIRPORT__CITY:
-                setCity((City)newValue);
+                setCity((City) newValue);
                 return;
             case ReservationsystemPackage.AIRPORT__ID:
-                setId((Integer)newValue);
+                setId((Integer) newValue);
                 return;
             case ReservationsystemPackage.AIRPORT__NAME:
-                setName((String)newValue);
+                setName((String) newValue);
                 return;
             case ReservationsystemPackage.AIRPORT__ABBR:
-                setAbbr((String)newValue);
+                setAbbr((String) newValue);
                 return;
         }
         super.eSet(featureID, newValue);
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public void eUnset(int featureID) {
         switch (featureID) {
             case ReservationsystemPackage.AIRPORT__CITY:
-                setCity((City)null);
+                setCity((City) null);
                 return;
             case ReservationsystemPackage.AIRPORT__ID:
                 setId(ID_EDEFAULT);
@@ -344,8 +348,8 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
@@ -364,13 +368,14 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
     }
 
     /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
+     * <!-- begin-user-doc --> <!-- end-user-doc -->
+     * 
      * @generated
      */
     @Override
     public String toString() {
-        if (eIsProxy()) return super.toString();
+        if (eIsProxy())
+            return super.toString();
 
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (id: ");
@@ -383,4 +388,4 @@ public class AirportImpl extends MinimalEObjectImpl.Container implements Airport
         return result.toString();
     }
 
-} //AirportImpl
+} // AirportImpl
