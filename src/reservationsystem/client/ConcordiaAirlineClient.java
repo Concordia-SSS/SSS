@@ -150,7 +150,54 @@ public class ConcordiaAirlineClient {
             return;
         }
         String tmp = reader.readLine("Enter the filght No.: ");
-        out.println("flight no. is " + tmp);
+        if (tmp != null && !tmp.equals("")) {
+
+            GeneralFlightImpl gflight = generalFlights.get(tmp);
+            if (gflight != null) {
+                out.println("The flight No. " + tmp + " already exsit!");
+                out.flush();
+                return;
+            }
+            gflight = new GeneralFlightImpl();
+            gflight.setFlightNo(tmp);
+            tmp = reader.readLine("Enter the airport code of departure: ");
+            if (tmp != null && !tmp.equals("")) {
+                AirportImpl ap = airports.get(tmp);
+                if (ap == null) {
+                    out.println("The airport " + tmp + " doesn't exsit!");
+                    out.flush();
+                    return;
+                }
+                gflight.setFrom(ap);
+
+                tmp = reader.readLine("Enter the airport code of destination: ");
+                if (tmp != null && !tmp.equals("")) {
+                    AirportImpl apDest = airports.get(tmp);
+                    if (apDest == null) {
+                        out.println("The airport " + tmp + " doesn't exsit!");
+                        out.flush();
+                        return;
+                    }
+                    gflight.setTo(apDest);
+                    tmp = reader.readLine("Enter the departure time: ");
+                    if (tmp != null && !tmp.equals("")) {
+                        gflight.setDepartureTime(tmp);
+
+                        tmp = reader.readLine("Enter the arrival time: ");
+                        if (tmp != null && !tmp.equals("")) {
+                            gflight.setArrivalTime(tmp);
+                            generalFlights.put(gflight.getFlightNo(), gflight);
+                            out.println("Add general flight success!");
+                            out.flush();
+                            return;
+                        }
+                    }
+
+                }
+
+            }
+        }
+        out.println("error! quit!");
         out.flush();
         return;
 
