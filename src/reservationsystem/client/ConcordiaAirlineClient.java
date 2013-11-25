@@ -31,7 +31,7 @@ public class ConcordiaAirlineClient {
         }
     };
 
-    // Define maps here as a database.
+    // TODO: Define maps here as a database.
     private static final Map<String, UserImpl> usersMap;
     static {
         usersMap = new HashMap<String, UserImpl>();
@@ -73,7 +73,6 @@ public class ConcordiaAirlineClient {
     }
 
     public static void main(String[] args) throws IOException {
-        // TODO Auto-generated method stub
 
         reader = new ConsoleReader();
         reader.setBellEnabled(false);
@@ -102,7 +101,7 @@ public class ConcordiaAirlineClient {
                     continue;
                 }
 
-                // implement different functionalities here
+                // TODO: implement different functionalities here
                 if (loginUser.getUserType() == RealUserType.OPERATOR.value) {
                     if (line.equalsIgnoreCase("create general flight")) {
                         createGeneralFlight();
@@ -204,7 +203,6 @@ public class ConcordiaAirlineClient {
     }
 
     private static void printWelcomePage() {
-        // TODO Auto-generated method stub
         out.println("Welcome to Concordia Airline Reservation System!");
         out.println("Powered by SSS");
         out.flush();
