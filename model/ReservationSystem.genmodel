@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ReservationSystem/src" modelPluginID="ReservationSystem"
+    modelName="ReservationSystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>ReservationSystem.ecore</foreignModel>
+  <genPackages prefix="Reservationsystem" disposableProviderFactory="true" ecorePackage="ReservationSystem.ecore#/">
+    <genDataTypes ecoreDataType="ReservationSystem.ecore#//UserType"/>
+    <genClasses image="false" ecoreClass="ReservationSystem.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/addr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/phone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/citizenship"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/residence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/middleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/FamilyName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/birthDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/passportId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Person/gender"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//User">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//User/belongsTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//User/userType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//User/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//User/md5Pwd"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="ReservationSystem.ecore#//Crew">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Crew/Leader"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Crew/specificFlight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Crew/employeeId"/>
+      <genOperations ecoreOperation="ReservationSystem.ecore#//Crew/setLeader"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Passenger">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Passenger/passenger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Passenger/booking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Passenger/specialNeeds"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Passenger/foodPref"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Pilot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Pilot/certificationId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Pilot/experience"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Attendant"/>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Booking">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Booking/paymentInfo"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Booking/passenger"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Booking/specificFlight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Booking/bookNo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Booking/bookingStatus"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Booking/seats"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Booking/baggageInfo"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//GeneralFlight">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//GeneralFlight/specificFlight"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//GeneralFlight/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//GeneralFlight/flightNo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//GeneralFlight/departureTime"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//GeneralFlight/to"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//GeneralFlight/arrivalTime"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//SpecificFlight">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//SpecificFlight/generalFlight"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//SpecificFlight/plane"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//SpecificFlight/crew"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//SpecificFlight/booking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//SpecificFlight/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//SpecificFlight/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//SpecificFlight/realDepTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//SpecificFlight/realArriTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//SpecificFlight/status"/>
+      <genOperations ecoreOperation="ReservationSystem.ecore#//SpecificFlight/assignPilot">
+        <genParameters ecoreParameter="ReservationSystem.ecore#//SpecificFlight/assignPilot/personId"/>
+      </genOperations>
+      <genOperations ecoreOperation="ReservationSystem.ecore#//SpecificFlight/assignAttd">
+        <genParameters ecoreParameter="ReservationSystem.ecore#//SpecificFlight/assignAttd/personId"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Plane">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Plane/specificFlight"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Plane/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Plane/model"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Plane/crewNum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Plane/capacity"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Plane/seats"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Airport">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Airport/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Airport/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Airport/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Airport/abbr"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//City">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//City/airport"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//City/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//City/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//City/abbr"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//PaymentInfo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/createTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/payTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/cardNo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/cardOwner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//PaymentInfo/cardAddr"/>
+    </genClasses>
+    <genClasses ecoreClass="ReservationSystem.ecore#//Seat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Seat/no"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Seat/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ReservationSystem.ecore#//Seat/isExit"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Seat/plane"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ReservationSystem.ecore#//Seat/book"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

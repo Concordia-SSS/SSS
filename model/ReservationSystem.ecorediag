@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_hIB44DjyEeOxTIqQov1iaA" type="EcoreTools" name="ReservationSystem" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_z0uWoDj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_z03gkDj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_z03gkTj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_gnCQUDxCEeOeL-xqoP107g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gnCQUTxCEeOeL-xqoP107g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BskfAD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/email"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BskfAT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_StYUoD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/gender"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_StYUoT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_zvnb8D0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/passportId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zvnb8T0MEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_n6yKwDxCEeOeL-xqoP107g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_n6yKwTxCEeOeL-xqoP107g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_rasAIDxCEeOeL-xqoP107g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/addr"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rasAITxCEeOeL-xqoP107g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_rMPCcD0IEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/phone"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rMPCcT0IEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_j5JSgD0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/citizenship"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_j5JSgT0MEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_s4hoUD0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/residence"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_s4hoUT0MEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_vMLF8D0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/middleName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_vMLF8T0MEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_xDArwD0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/FamilyName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_xDArwT0MEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_y0OxwD0MEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Person/birthDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_y0OxwT0MEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_z03gkjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_z03gkzj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_z03glDj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_z03glTj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_z03gljj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_z03glzj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_z03gmDj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_z0uWoTj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Person"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z0uWojj0EeO7FaC4SiNn9g" x="198" y="-117"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_1MDV8Dj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_1MDV8zj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_1MDV9Dj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_TaGo8Dj1EeO7FaC4SiNn9g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//User/userType"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_TaGo8Tj1EeO7FaC4SiNn9g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gkjxwD0LEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//User/userName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gkjxwT0LEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_mLsZYD0LEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//User/md5Pwd"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mLsZYT0LEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1MDV9Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1MDV9jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1MDV9zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_1MDV-Dj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_1MDV-Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_1MDV-jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_1MDV-zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_1MDV8Tj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//User"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1MDV8jj0EeO7FaC4SiNn9g" x="9" y="27"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2lUO8Dj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2lUO8zj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2lUO9Dj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_bINL4D0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Crew/employeeId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bINL4T0NEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2lUO9Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2lUO9jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2lUO9zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2lUO-Dj0EeO7FaC4SiNn9g" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_li-vYD0SEeOO74S2P8eNsQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="ReservationSystem.ecore#//Crew/setLeader"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_li-vYT0SEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2lUO-Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2lUO-jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2lUO-zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2lUO8Tj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Crew"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2lUO8jj0EeO7FaC4SiNn9g" x="144" y="180"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_3_Uu0Dj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_3_Uu0zj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_3_Uu1Dj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_D2TLoD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Passenger/specialNeeds"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_D2TLoT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_FlAJID0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Passenger/foodPref"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FlAJIT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_3_Uu1Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_3_Uu1jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_3_Uu1zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_3_Uu2Dj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_3_Uu2Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_3_Uu2jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_3_Uu2zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_3_Uu0Tj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Passenger"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3_Uu0jj0EeO7FaC4SiNn9g" x="702" y="-90"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_6ZTd8Dj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_6ZTd8zj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_6ZTd9Dj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_LiLSMD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Pilot/certificationId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LiLSMT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_MoG_gD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Pilot/experience"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_MoG_gT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_6ZTd9Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6ZTd9jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6ZTd9zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_6ZTd-Dj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_6ZTd-Tj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_6ZTd-jj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_6ZTd-zj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_6ZTd8Tj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Pilot"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6ZTd8jj0EeO7FaC4SiNn9g" x="84" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_7MB7YDj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_7MB7Yzj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_7MB7ZDj0EeO7FaC4SiNn9g" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_7MB7ZTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7MB7Zjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7MB7Zzj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_7MB7aDj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_7MB7aTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_7MB7ajj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_7MB7azj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_7MB7YTj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Attendant"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7MB7Yjj0EeO7FaC4SiNn9g" x="192" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9HErwDj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9HErwzj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9HErxDj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_gyhN4D0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Booking/bookNo"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gyhN4T0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_iu-6kD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Booking/bookingStatus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_iu-6kT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_sw6AkD0QEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Booking/baggageInfo"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_sw6AkT0QEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9HErxTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9HErxjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9HErxzj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9HEryDj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9HEryTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9HEryjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9HEryzj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9HErwTj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Booking"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9HErwjj0EeO7FaC4SiNn9g" x="657" y="207"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_92YBwDj0EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_92YBwzj0EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_92YBxDj0EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ee2-oD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//GeneralFlight/flightNo"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ee2-oT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_fxS24D0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//GeneralFlight/departureTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_fxS24T0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_wrCbMD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//GeneralFlight/arrivalTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_wrCbMT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_92YBxTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_92YBxjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_92YBxzj0EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_92YByDj0EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_92YByTj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_92YByjj0EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_92YByzj0EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_92YBwTj0EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//GeneralFlight"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_92YBwjj0EeO7FaC4SiNn9g" x="387" y="360"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_AA4xgDj1EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_AA4xgzj1EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_AA4xhDj1EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_5DJ8sD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//SpecificFlight/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5DJ8sT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_5lra8D0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//SpecificFlight/date"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_5lra8T0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_-y8KAD0NEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//SpecificFlight/realDepTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_-y8KAT0NEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_EVqLsD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//SpecificFlight/realArriTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_EVqLsT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_OlA7oD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//SpecificFlight/status"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OlA7oT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_AA4xhTj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AA4xhjj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AA4xhzj1EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_AA4xiDj1EeO7FaC4SiNn9g" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_Ffp80D0SEeOO74S2P8eNsQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="ReservationSystem.ecore#//SpecificFlight/assignPilot"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ffp80T0SEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_UpTcgD0SEeOO74S2P8eNsQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="ReservationSystem.ecore#//SpecificFlight/assignAttd"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_UpTcgT0SEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_AA4xiTj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AA4xijj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AA4xizj1EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_AA4xgTj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//SpecificFlight"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AA4xgjj1EeO7FaC4SiNn9g" x="387" y="180"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BGEQ4Dj1EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_BGEQ4zj1EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_BGEQ5Dj1EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_RXC-YD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Plane/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RXC-YT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Sw-lwD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Plane/model"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Sw-lwT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_ZfBLED0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Plane/crewNum"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZfBLET0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_akKOMD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Plane/capacity"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_akKOMT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_BGEQ5Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BGEQ5jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BGEQ5zj1EeO7FaC4SiNn9g"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_MO-AcDxBEeOeL-xqoP107g" value="0.3"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_BGEQ6Dj1EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_BGEQ6Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BGEQ6jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BGEQ6zj1EeO7FaC4SiNn9g"/>
+      <layoutConstraint xmi:type="notation:Ratio" xmi:id="_MO-AcTxBEeOeL-xqoP107g" value="0.3"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_BGEQ4Tj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Plane"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BGEQ4jj1EeO7FaC4SiNn9g" x="387" y="45"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_B1rI4Dj1EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_B1rI4zj1EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_B1rI5Dj1EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_Omu9cD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Airport/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Omu9cT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_PNmJID0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Airport/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_PNmJIT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_P9qUID0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Airport/abbr"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_P9qUIT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_B1rI5Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_B1rI5jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_B1rI5zj1EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_B1rI6Dj1EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_B1rI6Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_B1rI6jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_B1rI6zj1EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_B1rI4Tj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Airport"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B1rI4jj1EeO7FaC4SiNn9g" x="387" y="485"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_C5XagDj1EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_C5Xagzj1EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_C5XahDj1EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_H35G4D0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//City/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_H35G4T0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_IV8U0D0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//City/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IV8U0T0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_IlcJYD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//City/abbr"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_IlcJYT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C5XahTj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C5Xahjj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C5Xahzj1EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_C5XaiDj1EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_C5XaiTj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_C5Xaijj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_C5Xaizj1EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_C5XagTj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//City"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C5Xagjj1EeO7FaC4SiNn9g" x="648" y="431"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_GeoRADj1EeO7FaC4SiNn9g" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_GeoRAzj1EeO7FaC4SiNn9g" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_Gexa8Dj1EeO7FaC4SiNn9g" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_GeoRATj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="ReservationSystem.ecore#//UserType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GeoRAjj1EeO7FaC4SiNn9g" x="-36" y="135"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_vx4W0Dj1EeO7FaC4SiNn9g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_vx4W0zj1EeO7FaC4SiNn9g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_vx4W1Dj1EeO7FaC4SiNn9g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2YZKID0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/id"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2YZKIT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_3W_gYD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/createTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3W_gYT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_4VUw4D0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/status"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_4VUw4T0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_42-scD0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/payTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_42-scT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_87tGID0OEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_87tGIT0OEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_A5gYcD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/cardNo"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_A5gYcT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Bs8AgD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/cardOwner"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Bs8AgT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Ex8CkD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//PaymentInfo/cardAddr"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Ex8CkT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_vx4W1Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vx4W1jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vx4W1zj1EeO7FaC4SiNn9g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_vx4W2Dj1EeO7FaC4SiNn9g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_vx4W2Tj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_vx4W2jj1EeO7FaC4SiNn9g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_vx4W2zj1EeO7FaC4SiNn9g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_vx4W0Tj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//PaymentInfo"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vx4W0jj1EeO7FaC4SiNn9g" x="909" y="207"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_dsWRsD0PEeOO74S2P8eNsQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_dsXf0D0PEeOO74S2P8eNsQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_dsXf0T0PEeOO74S2P8eNsQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_et3ZED0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Seat/no"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_et3ZET0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_gCPLAD0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Seat/type"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_gCPLAT0PEeOO74S2P8eNsQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_hX2TED0PEeOO74S2P8eNsQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ReservationSystem.ecore#//Seat/isExit"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_hX2TET0PEeOO74S2P8eNsQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_dsXf0j0PEeOO74S2P8eNsQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_dsXf0z0PEeOO74S2P8eNsQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_dsXf1D0PEeOO74S2P8eNsQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_dsxIcD0PEeOO74S2P8eNsQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_dsxIcT0PEeOO74S2P8eNsQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_dsxIcj0PEeOO74S2P8eNsQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_dsxIcz0PEeOO74S2P8eNsQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_dsWRsT0PEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ReservationSystem.ecore#//Seat"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dsWRsj0PEeOO74S2P8eNsQ" x="549" y="45"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_hIB44TjyEeOxTIqQov1iaA"/>
+  <element xmi:type="ecore:EPackage" href="ReservationSystem.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_InWRADj1EeO7FaC4SiNn9g" type="3002" source="_1MDV8Dj0EeO7FaC4SiNn9g" target="_z0uWoDj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_InWRBDj1EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_InWRBTj1EeO7FaC4SiNn9g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_InWRBjj1EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_InWRBzj1EeO7FaC4SiNn9g" x="-1" y="14"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_InWRATj1EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_InWRAjj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//User/belongsTo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_InWRAzj1EeO7FaC4SiNn9g" points="[4, 0, -102, 26]$[107, -36, 1, -10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IoF34Dj1EeO7FaC4SiNn9g" id="(0.7058823529411765,0.023255813953488372)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IoF34Tj1EeO7FaC4SiNn9g" id="(0.20588235294117646,0.2558139534883721)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_kkyzUDj1EeO7FaC4SiNn9g" type="3003" source="_2lUO8Dj0EeO7FaC4SiNn9g" target="_z0uWoDj0EeO7FaC4SiNn9g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_kkyzUTj1EeO7FaC4SiNn9g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_kkyzUjj1EeO7FaC4SiNn9g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kkyzUzj1EeO7FaC4SiNn9g" points="[3, -2, -5, 76]$[3, -57, -5, 21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_kk79QDj1EeO7FaC4SiNn9g" id="(0.696078431372549,0.046511627906976744)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_o3xZgDj3EeO7FaC4SiNn9g" id="(0.13725490196078433,0.9069767441860465)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lAw9oDj1EeO7FaC4SiNn9g" type="3003" source="_3_Uu0Dj0EeO7FaC4SiNn9g" target="_z0uWoDj0EeO7FaC4SiNn9g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_lAw9oTj1EeO7FaC4SiNn9g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lAw9ojj1EeO7FaC4SiNn9g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lAw9ozj1EeO7FaC4SiNn9g" points="[-50, 9, 311, 20]$[-358, 9, 3, 20]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_zMxecDj3EeO7FaC4SiNn9g" id="(0.9705882352941176,0.23255813953488372)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_l8kekDj1EeO7FaC4SiNn9g" type="3003" source="_6ZTd8Dj0EeO7FaC4SiNn9g" target="_2lUO8Dj0EeO7FaC4SiNn9g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_l8kekTj1EeO7FaC4SiNn9g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_l8kekjj1EeO7FaC4SiNn9g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_l8kekzj1EeO7FaC4SiNn9g" points="[22, -20, -38, 76]$[22, -75, -38, 21]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_mYry0Dj1EeO7FaC4SiNn9g" type="3003" source="_7MB7YDj0EeO7FaC4SiNn9g" target="_2lUO8Dj0EeO7FaC4SiNn9g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_mYry0Tj1EeO7FaC4SiNn9g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_mYry0jj1EeO7FaC4SiNn9g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mYry0zj1EeO7FaC4SiNn9g" points="[-6, -8, 45, 64]$[-6, -30, 45, 42]$[-17, -30, 34, 42]$[-17, -51, 34, 21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mYry1Dj1EeO7FaC4SiNn9g" id="(0.14705882352941177,0.11627906976744186)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_nWk-cDj1EeO7FaC4SiNn9g" type="3002" source="_2lUO8Dj0EeO7FaC4SiNn9g" target="_2lUO8Dj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_nWk-dDj1EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nWk-dTj1EeO7FaC4SiNn9g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_nWk-djj1EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_nWk-dzj1EeO7FaC4SiNn9g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_nWk-cTj1EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_nWk-cjj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Crew/Leader"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nWk-czj1EeO7FaC4SiNn9g" points="[2, 0, 13, -4]$[46, 0, 57, -4]$[46, -38, 57, -42]$[-2, -38, 9, -42]$[-2, -12, 9, -16]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nWk-eDj1EeO7FaC4SiNn9g" id="(0.9803921568627451,0.3023255813953488)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nWk-eTj1EeO7FaC4SiNn9g" id="(0.8725490196078431,0.3953488372093023)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_yPSNYDj1EeO7FaC4SiNn9g" type="3002" source="_9HErwDj0EeO7FaC4SiNn9g" target="_vx4W0Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_yPSNZDj1EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yPSNZTj1EeO7FaC4SiNn9g" x="-8" y="-23"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_yPSNZjj1EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_yPSNZzj1EeO7FaC4SiNn9g" x="-11" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_yPSNYTj1EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_yPSNYjj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Booking/paymentInfo"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yPSNYzj1EeO7FaC4SiNn9g" points="[-15, 6, 182, -69]$[-195, 75, 2, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yPSNaDj1EeO7FaC4SiNn9g" id="(0.21568627450980393,0.8604651162790697)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yPSNaTj1EeO7FaC4SiNn9g" id="(0.6176470588235294,0.023255813953488372)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_zwbQADj1EeO7FaC4SiNn9g" type="3002" source="_92YBwDj0EeO7FaC4SiNn9g" target="_B1rI4Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_zwbQBDj1EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zwbQBTj1EeO7FaC4SiNn9g" x="-3" y="-16"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zwbQBjj1EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_zwbQBzj1EeO7FaC4SiNn9g" x="-3" y="11"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_zwbQATj1EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_zwbQAjj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//GeneralFlight/from"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_zwbQAzj1EeO7FaC4SiNn9g" points="[-11, 21, 25, -99]$[-86, 116, -50, -4]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F6HXMDxBEeOeL-xqoP107g" id="(0.4019607843137255,0.16666666666666666)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_31hdIDj1EeO7FaC4SiNn9g" type="3002" source="_9HErwDj0EeO7FaC4SiNn9g" target="_3_Uu0Dj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_31hdJDj1EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_31hdJTj1EeO7FaC4SiNn9g" x="5" y="34"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_31hdJjj1EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_31hdJzj1EeO7FaC4SiNn9g" x="5" y="-18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_31hdITj1EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_31hdIjj1EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Booking/passenger"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_31hdIzj1EeO7FaC4SiNn9g" points="[0, -1, -54, 266]$[21, -134, -33, 133]$[46, -235, -8, 32]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dh550Dj4EeO7FaC4SiNn9g" id="(0.8725490196078431,0.09230769230769231)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Dh550Tj4EeO7FaC4SiNn9g" id="(0.4019607843137255,0.9692307692307692)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_AwX4QDj2EeO7FaC4SiNn9g" type="3002" source="_3_Uu0Dj0EeO7FaC4SiNn9g" target="_9HErwDj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_AwX4RDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_AwX4RTj2EeO7FaC4SiNn9g" x="-5" y="-29"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_AwX4Rjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_AwX4Rzj2EeO7FaC4SiNn9g" x="-5" y="15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_AwX4QTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_AwX4Qjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Passenger/booking"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AwX4Qzj2EeO7FaC4SiNn9g" points="[-8, 32, 46, -235]$[-33, 133, 21, -134]$[-54, 266, 0, -1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nak1ED0QEeOO74S2P8eNsQ" id="(0.4019607843137255,0.9692307692307692)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nak1ET0QEeOO74S2P8eNsQ" id="(0.8725490196078431,0.09230769230769231)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_GC-aUDj2EeO7FaC4SiNn9g" type="3002" source="_AA4xgDj1EeO7FaC4SiNn9g" target="_92YBwDj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_GC-aVDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_GC-aVTj2EeO7FaC4SiNn9g" x="-7" y="-42"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_GC-aVjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_GC-aVzj2EeO7FaC4SiNn9g" x="-7" y="8"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_GC-aUTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_GC-aUjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//SpecificFlight/generalFlight"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GC-aUzj2EeO7FaC4SiNn9g" points="[2, -20, 2, 112]$[10, -68, 10, 64]$[3, -111, 3, 21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OS-hoDj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.09302325581395349)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_OS-hoTj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.7906976744186046)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_IidUgDj2EeO7FaC4SiNn9g" type="3002" source="_92YBwDj0EeO7FaC4SiNn9g" target="_AA4xgDj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_IidUhDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IidUhTj2EeO7FaC4SiNn9g" x="-8" y="-41"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_IidUhjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_IidUhzj2EeO7FaC4SiNn9g" x="-8" y="11"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_IidUgTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_IidUgjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//GeneralFlight/specificFlight"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IidUgzj2EeO7FaC4SiNn9g" points="[3, 21, 3, -111]$[10, 64, 10, -68]$[2, 112, 2, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L6fAQDj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.7906976744186046)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_L6fAQTj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.09302325581395349)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_RWTvwDj2EeO7FaC4SiNn9g" type="3002" source="_AA4xgDj1EeO7FaC4SiNn9g" target="_BGEQ4Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_RWTvxDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RWTvxTj2EeO7FaC4SiNn9g" x="-6" y="-28"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RWTvxjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RWTvxzj2EeO7FaC4SiNn9g" x="-4" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_RWTvwTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_RWTvwjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//SpecificFlight/plane"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RWTvwzj2EeO7FaC4SiNn9g" points="[-9, 2, 2, -62]$[-9, 9, 2, -55]$[-9, 57, 2, -7]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UkQnkjj4EeO7FaC4SiNn9g" id="(0.696078431372549,0.9534883720930233)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_UkQnkzj4EeO7FaC4SiNn9g" id="(0.5882352941176471,0.18604651162790697)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_TwSe4Dj2EeO7FaC4SiNn9g" type="3002" source="_BGEQ4Dj1EeO7FaC4SiNn9g" target="_AA4xgDj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_TwSe5Dj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TwSe5Tj2EeO7FaC4SiNn9g" x="-5" y="33"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TwSe5jj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_TwSe5zj2EeO7FaC4SiNn9g" x="-5" y="-16"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_TwSe4Tj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_TwSe4jj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Plane/specificFlight"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TwSe4zj2EeO7FaC4SiNn9g" points="[2, -7, -9, 57]$[2, -55, -9, 9]$[2, -62, -9, 2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X8rm0Dj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.18604651162790697)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_X8rm0Tj2EeO7FaC4SiNn9g" id="(0.696078431372549,0.9534883720930233)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_cN0r4Dj2EeO7FaC4SiNn9g" type="3002" source="_AA4xgDj1EeO7FaC4SiNn9g" target="_2lUO8Dj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_cN0r5Dj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_cN0r5Tj2EeO7FaC4SiNn9g" x="9" y="-14"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_cN0r5jj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_cN0r5zj2EeO7FaC4SiNn9g" x="2" y="9"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_cN0r4Tj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_cN0r4jj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//SpecificFlight/crew"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cN0r4zj2EeO7FaC4SiNn9g" points="[-24, 0, 132, 6]$[-58, 0, 98, 6]$[-96, -6, 60, 0]$[-152, -6, 4, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgoXYDj4EeO7FaC4SiNn9g" id="(0.24509803921568626,0.37209302325581395)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hgoXYTj4EeO7FaC4SiNn9g" id="(0.13725490196078433,0.8604651162790697)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_e5zxADj2EeO7FaC4SiNn9g" type="3002" source="_2lUO8Dj0EeO7FaC4SiNn9g" target="_AA4xgDj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_e5zxBDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_e5zxBTj2EeO7FaC4SiNn9g" x="-16" y="-11"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_e5zxBjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_e5zxBzj2EeO7FaC4SiNn9g" x="4" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_e5zxATj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_e5zxAjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Crew/specificFlight"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_e5zxAzj2EeO7FaC4SiNn9g" points="[4, 0, -152, -6]$[60, 0, -96, -6]$[98, 6, -58, 0]$[132, 6, -24, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_hS5IQDj2EeO7FaC4SiNn9g" id="(0.13725490196078433,0.8604651162790697)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e59iADj2EeO7FaC4SiNn9g" id="(0.24509803921568626,0.37209302325581395)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_jZY6sDj2EeO7FaC4SiNn9g" type="3002" source="_B1rI4Dj1EeO7FaC4SiNn9g" target="_C5XagDj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_jZY6tDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_jZY6tTj2EeO7FaC4SiNn9g" x="-6" y="-12"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_jZY6tjj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_jZY6tzj2EeO7FaC4SiNn9g" x="-6" y="18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_jZY6sTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_jZY6sjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Airport/city"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jZY6szj2EeO7FaC4SiNn9g" points="[60, -6, -219, 12]$[221, -6, -58, 12]$[221, -6, -58, 12]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_igdskDxBEeOeL-xqoP107g" id="(0.4019607843137255,0.16666666666666666)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_igdskTxBEeOeL-xqoP107g" id="(0.5882352941176471,0.16279069767441862)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lHe0MDj2EeO7FaC4SiNn9g" type="3002" source="_C5XagDj1EeO7FaC4SiNn9g" target="_B1rI4Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_lHe0NDj2EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lHe0NTj2EeO7FaC4SiNn9g" y="-15"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_lHe0Njj2EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_lHe0Nzj2EeO7FaC4SiNn9g" x="5" y="11"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_lHe0MTj2EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lHe0Mjj2EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//City/airport"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lHe0Mzj2EeO7FaC4SiNn9g" points="[-58, 12, 221, -6]$[-58, 12, 221, -6]$[-219, 12, 60, -6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lHn-IDj2EeO7FaC4SiNn9g" id="(0.5882352941176471,0.16279069767441862)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_oJB5oDj2EeO7FaC4SiNn9g" id="(0.4019607843137255,0.16666666666666666)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_RAKrMDj3EeO7FaC4SiNn9g" type="3002" source="_9HErwDj0EeO7FaC4SiNn9g" target="_AA4xgDj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_RAKrNDj3EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RAKrNTj3EeO7FaC4SiNn9g" x="-22" y="-12"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RAKrNjj3EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_RAKrNzj3EeO7FaC4SiNn9g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_RAKrMTj3EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_RAKrMjj3EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Booking/specificFlight"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RAKrMzj3EeO7FaC4SiNn9g" points="[-22, 0, 187, 1]$[-97, 0, 112, 1]$[-159, 0, 50, 1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xbgp8D0IEeOO74S2P8eNsQ" id="(0.22549019607843138,0.5348837209302325)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xbgp8T0IEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_VoObcDj3EeO7FaC4SiNn9g" type="3002" source="_AA4xgDj1EeO7FaC4SiNn9g" target="_9HErwDj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_VoObdDj3EeO7FaC4SiNn9g" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_VoObdTj3EeO7FaC4SiNn9g" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_VoObdjj3EeO7FaC4SiNn9g" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_VoObdzj3EeO7FaC4SiNn9g" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_VoObcTj3EeO7FaC4SiNn9g" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_VoObcjj3EeO7FaC4SiNn9g" fontColor="4210752" fontName="Segoe UI" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//SpecificFlight/booking"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VoObczj3EeO7FaC4SiNn9g" points="[50, 1, -159, 0]$[112, 1, -97, 0]$[187, 1, -22, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XbdmoD0IEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YMnq0Tj3EeO7FaC4SiNn9g" id="(0.22549019607843138,0.5348837209302325)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_mwVsoD0NEeOO74S2P8eNsQ" type="3002" source="_92YBwDj0EeO7FaC4SiNn9g" target="_B1rI4Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_mwW6wD0NEeOO74S2P8eNsQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_mwW6wT0NEeOO74S2P8eNsQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_mwXh0D0NEeOO74S2P8eNsQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_mwXh0T0NEeOO74S2P8eNsQ" x="-12" y="7"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_mwVsoT0NEeOO74S2P8eNsQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_mwVsoj0NEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//GeneralFlight/to"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mwVsoz0NEeOO74S2P8eNsQ" points="[2, 23, 1, -76]$[2, 85, 1, -14]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mwalID0NEeOO74S2P8eNsQ" id="(0.09803921568627451,0.6461538461538462)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mwalIT0NEeOO74S2P8eNsQ" id="(0.10784313725490197,0.35714285714285715)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_kazGsD0PEeOO74S2P8eNsQ" type="3002" source="_BGEQ4Dj1EeO7FaC4SiNn9g" target="_dsWRsD0PEeOO74S2P8eNsQ">
+    <children xmi:type="notation:Node" xmi:id="_kaztwD0PEeOO74S2P8eNsQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kaztwT0PEeOO74S2P8eNsQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_kaztwj0PEeOO74S2P8eNsQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_kaztwz0PEeOO74S2P8eNsQ" x="-5" y="12"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_kazGsT0PEeOO74S2P8eNsQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_kazGsj0PEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Plane/seats"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_kazGsz0PEeOO74S2P8eNsQ" points="[50, -6, -85, -7]$[164, -38, 29, -39]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__NP1gD0PEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__NP1gT0PEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_sbFXAD0PEeOO74S2P8eNsQ" type="3002" source="_dsWRsD0PEeOO74S2P8eNsQ" target="_BGEQ4Dj1EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_sbFXBD0PEeOO74S2P8eNsQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sbFXBT0PEeOO74S2P8eNsQ" x="-9" y="5"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_sbFXBj0PEeOO74S2P8eNsQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_sbFXBz0PEeOO74S2P8eNsQ" x="8" y="-15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_sbFXAT0PEeOO74S2P8eNsQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_sbFXAj0PEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Seat/plane"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sbFXAz0PEeOO74S2P8eNsQ" points="[29, -39, 164, -38]$[-85, -7, 50, -6]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__NRDoD0PEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__NRDoT0PEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Lcc9UD0QEeOO74S2P8eNsQ" type="3002" source="_9HErwDj0EeO7FaC4SiNn9g" target="_dsWRsD0PEeOO74S2P8eNsQ">
+    <children xmi:type="notation:Node" xmi:id="_LcdkYD0QEeOO74S2P8eNsQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_LcdkYT0QEeOO74S2P8eNsQ" x="2" y="-14"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_LcdkYj0QEeOO74S2P8eNsQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_LcdkYz0QEeOO74S2P8eNsQ" x="-1" y="13"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Lcc9UT0QEeOO74S2P8eNsQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Lcc9Uj0QEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Booking/seats"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Lcc9Uz0QEeOO74S2P8eNsQ" points="[-30, -31, 96, 96]$[-121, -166, 5, -39]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jIVj0D0QEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jIVj0T0QEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_OLDRkD0QEeOO74S2P8eNsQ" type="3002" source="_dsWRsD0PEeOO74S2P8eNsQ" target="_9HErwDj0EeO7FaC4SiNn9g">
+    <children xmi:type="notation:Node" xmi:id="_OLD4oD0QEeOO74S2P8eNsQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OLD4oT0QEeOO74S2P8eNsQ" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_OLD4oj0QEeOO74S2P8eNsQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_OLD4oz0QEeOO74S2P8eNsQ" x="-1" y="20"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_OLDRkT0QEeOO74S2P8eNsQ" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_OLDRkj0QEeOO74S2P8eNsQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="ReservationSystem.ecore#//Seat/book"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_OLDRkz0QEeOO74S2P8eNsQ" points="[5, -39, -121, -166]$[96, 96, -30, -31]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jIXZAD0QEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jIXZAT0QEeOO74S2P8eNsQ" id="(0.5,0.5)"/>
+  </edges>
+</notation:Diagram>
