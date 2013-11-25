@@ -18,6 +18,7 @@ public class ConcordiaAirlineClient {
     private static ConsoleReader reader;
     private static String username;
     private static Character mask = '*';
+    private static UserImpl loginUser;
 
     public enum RealUserType {
         OPERATOR(1), USER(2);
@@ -65,14 +66,49 @@ public class ConcordiaAirlineClient {
         }
 
         while ((line = reader.readLine("ConcordiaAirline> ")) != null) {
-            out.println("======>\"" + line + "\"");
-            out.flush();
+            try {
+                if (line.equalsIgnoreCase("quit") || line.equalsIgnoreCase("exit")) {
+                    break;
+                }
+                if (line.equals("")) {
+                    continue;
+                }
 
-            // implement different functionalities here
-            if (line.equalsIgnoreCase("quit") || line.equalsIgnoreCase("exit")) {
-                break;
+                // implement different functionalities here
+                if (loginUser.getUserType() == RealUserType.OPERATOR.value) {
+                    if (line.equalsIgnoreCase("create general flight")) {
+                        createGeneralFlight();
+                    } else {
+                        out.println("No such command: \"" + line + "\"");
+                        out.flush();
+                    }
+
+                } else if (loginUser.getUserType() == RealUserType.USER.value) {
+                    if (line.equalsIgnoreCase("listFlight")) {
+
+                    } else {
+                        out.println("No such command: \"" + line + "\"");
+                        out.flush();
+                    }
+                }
+            } catch (Exception e) {
+                out.println("exception: " + e.getMessage());
+                out.flush();
             }
         }
+
+    }
+
+    private static void createGeneralFlight() throws Exception {
+        if (loginUser.getUserType() != RealUserType.OPERATOR.value) {
+            out.println("illegal command for your user type!");
+            out.flush();
+            return;
+        }
+        String tmp = reader.readLine("Enter the filght No.: ");
+        out.println("flight no. is " + tmp);
+        out.flush();
+        return;
 
     }
 
@@ -90,6 +126,7 @@ public class ConcordiaAirlineClient {
                 String password = reader.readLine("Enter password: ", mask);
                 if (password != null) {
                     if (usersMap.get(username) != null && usersMap.get(username).getMd5Pwd().equals(password)) {
+                        loginUser = usersMap.get(username);
                         out.println("Login Success.");
                         out.flush();
                         return true;
@@ -101,6 +138,7 @@ public class ConcordiaAirlineClient {
             return false;
         } catch (IOException e) {
             out.println("exception: " + e.getMessage());
+            out.flush();
             return false;
         }
     }
