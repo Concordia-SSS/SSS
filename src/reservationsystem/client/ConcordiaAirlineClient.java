@@ -3,6 +3,7 @@ package reservationsystem.client;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,8 +13,12 @@ import jline.ArgumentCompletor;
 import jline.ConsoleReader;
 import jline.SimpleCompletor;
 import reservationsystem.impl.AirportImpl;
+import reservationsystem.impl.BookingImpl;
 import reservationsystem.impl.GeneralFlightImpl;
+import reservationsystem.impl.ReservationsystemFactoryImpl;
+import reservationsystem.impl.SpecificFlightImpl;
 import reservationsystem.impl.UserImpl;
+import reservationsystem.util.ReservationsystemAdapterFactory;
 
 public class ConcordiaAirlineClient {
 	private static PrintWriter out;
@@ -71,6 +76,7 @@ public class ConcordiaAirlineClient {
 		tmp.setTo(airports.get("JFK"));
 		generalFlights.put(tmp.getFlightNo(), tmp);
 	}
+	
 
 	public static void main(String[] args) throws IOException {
 
@@ -241,7 +247,8 @@ public class ConcordiaAirlineClient {
 			return false;
 		}
 	}
-
+// Ashis Starts Working From Here for  Booking
+	
 	private static void printCommandHelp() {
 		out.println("-------- Command Help --------");
 		out.println("| Command | Param | Usage     |");
@@ -250,5 +257,43 @@ public class ConcordiaAirlineClient {
 		out.println("----- End Command Help -------");
 		out.flush();
 
+	}
+	
+
+	private static final Map<String, SpecificFlightImpl> specificFlights;
+	static {
+		specificFlights = new HashMap<String, SpecificFlightImpl>();
+		
+		SpecificFlightImpl tmp =  (SpecificFlightImpl)ReservationsystemFactoryImpl.init().createSpecificFlight();
+		tmp.setId(specificFlights.size()+1);
+		tmp.setGeneralFlight(generalFlights.get("CA001"));
+		tmp.setDate(new Date(2013, 12, 25));
+		specificFlights.put(Integer.toString(tmp.getId()), tmp);
+		tmp =  (SpecificFlightImpl)ReservationsystemFactoryImpl.init().createSpecificFlight();		
+		tmp.setId(specificFlights.size()+1);
+		tmp.setGeneralFlight(generalFlights.get("CA001"));
+		tmp.setDate(new Date(2013, 12, 26));
+	}
+
+	
+	private static final Map<String, BookingImpl> bookings;
+	static {
+		bookings = new HashMap<String, BookingImpl>();
+		
+		BookingImpl tmp = (BookingImpl)ReservationsystemFactoryImpl.init().createBooking();
+		//Select Flight by ID
+		//Select Seat
+		//Select Passenger 
+		//add payment
+		//Save
+		//show booking
+		
+		
+	}
+	
+	private static void processBooking()
+	{
+		
+		ReservationsystemFactoryImpl.init().createBooking();
 	}
 }
