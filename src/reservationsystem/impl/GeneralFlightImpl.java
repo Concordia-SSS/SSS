@@ -456,9 +456,7 @@ public class GeneralFlightImpl extends MinimalEObjectImpl.Container implements G
      */
     @Override
     public String toString() {
-        if (eIsProxy())
-            return super.toString();
-
+      
         StringBuffer result = new StringBuffer(super.toString());
         result.append(" (flightNo: ");
         result.append(flightNo);

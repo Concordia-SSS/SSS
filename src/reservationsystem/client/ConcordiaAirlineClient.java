@@ -15,11 +15,14 @@ import jline.SimpleCompletor;
 import reservationsystem.impl.AirportImpl;
 import reservationsystem.impl.BookingImpl;
 import reservationsystem.impl.GeneralFlightImpl;
+import reservationsystem.impl.PassengerImpl;
+import reservationsystem.impl.PersonImpl;
 import reservationsystem.impl.ReservationsystemFactoryImpl;
 import reservationsystem.impl.SpecificFlightImpl;
 import reservationsystem.impl.UserImpl;
 import reservationsystem.util.ReservationsystemAdapterFactory;
 
+@SuppressWarnings("deprecation")
 public class ConcordiaAirlineClient {
 	private static PrintWriter out;
 	private static ConsoleReader reader;
@@ -55,28 +58,27 @@ public class ConcordiaAirlineClient {
 	private static final Map<String, AirportImpl> airports;
 	static {
 		airports = new HashMap<String, AirportImpl>();
-		AirportImpl tmp = new AirportImpl();
-		tmp.setAbbr("YUL");
-		tmp.setName("Montreal");
-		airports.put(tmp.getAbbr(), tmp);
-		tmp = new AirportImpl();
-		tmp.setAbbr("JFK");
-		tmp.setName("New York");
-		airports.put(tmp.getAbbr(), tmp);
+		AirportImpl tmp1 = new AirportImpl();
+		tmp1.setAbbr("YUL");
+		tmp1.setName("Montreal");
+		airports.put(tmp1.getAbbr(), tmp1);
+		tmp1 = new AirportImpl();
+		tmp1.setAbbr("JFK");
+		tmp1.setName("New York");
+		airports.put(tmp1.getAbbr(), tmp1);
 	}
 
 	private static final Map<String, GeneralFlightImpl> generalFlights;
 	static {
 		generalFlights = new HashMap<String, GeneralFlightImpl>();
-		GeneralFlightImpl tmp = new GeneralFlightImpl();
-		tmp.setFlightNo("CA001");
-		tmp.setArrivalTime("1130");
-		tmp.setDepartureTime("1000");
-		tmp.setFrom(airports.get("YUL"));
-		tmp.setTo(airports.get("JFK"));
-		generalFlights.put(tmp.getFlightNo(), tmp);
+		GeneralFlightImpl tmp11 = new GeneralFlightImpl();
+		tmp11.setFlightNo("CA001");
+		tmp11.setArrivalTime("1130");
+		tmp11.setDepartureTime("1000");
+		tmp11.setFrom(airports.get("YUL"));
+		tmp11.setTo(airports.get("JFK"));
+		generalFlights.put(tmp11.getFlightNo(), tmp11);
 	}
-	
 
 	public static void main(String[] args) throws IOException {
 
@@ -100,10 +102,10 @@ public class ConcordiaAirlineClient {
 		}
 
 		printCommandHelp();
-		
+
 		while ((line = reader.readLine("ConcordiaAirline> ")) != null) {
 			try {
-				
+
 				if (line.equalsIgnoreCase("quit")
 						|| line.equalsIgnoreCase("exit")) {
 					break;
@@ -126,6 +128,8 @@ public class ConcordiaAirlineClient {
 				} else if (loginUser.getUserType() == RealUserType.USER.value) {
 					if (line.equalsIgnoreCase("listFlight")) {
 
+					} else if (line.equalsIgnoreCase("createbooking")) {
+						processBooking();
 					} else {
 						out.println("No such command: \"" + line + "\"");
 						out.flush();
@@ -247,53 +251,165 @@ public class ConcordiaAirlineClient {
 			return false;
 		}
 	}
-// Ashis Starts Working From Here for  Booking
-	
+
+	// Ashis Starts Working From Here for Booking
+
 	private static void printCommandHelp() {
 		out.println("-------- Command Help --------");
 		out.println("| Command | Param | Usage     |");
 		out.println("| exit - exit from application|");
 		out.println("| quit - exit from application|");
+		out.println("|createbooking - start booking process");
 		out.println("----- End Command Help -------");
 		out.flush();
 
 	}
-	
 
 	private static final Map<String, SpecificFlightImpl> specificFlights;
 	static {
 		specificFlights = new HashMap<String, SpecificFlightImpl>();
-		
-		SpecificFlightImpl tmp =  (SpecificFlightImpl)ReservationsystemFactoryImpl.init().createSpecificFlight();
-		tmp.setId(specificFlights.size()+1);
+
+		SpecificFlightImpl tmp = (SpecificFlightImpl) ReservationsystemFactoryImpl
+				.init().createSpecificFlight();
+		tmp.setId(specificFlights.size() + 1);
 		tmp.setGeneralFlight(generalFlights.get("CA001"));
 		tmp.setDate(new Date(2013, 12, 25));
 		specificFlights.put(Integer.toString(tmp.getId()), tmp);
-		tmp =  (SpecificFlightImpl)ReservationsystemFactoryImpl.init().createSpecificFlight();		
-		tmp.setId(specificFlights.size()+1);
+		tmp = (SpecificFlightImpl) ReservationsystemFactoryImpl.init()
+				.createSpecificFlight();
+		tmp.setId(specificFlights.size() + 1);
 		tmp.setGeneralFlight(generalFlights.get("CA001"));
 		tmp.setDate(new Date(2013, 12, 26));
 	}
 
-	
 	private static final Map<String, BookingImpl> bookings;
 	static {
 		bookings = new HashMap<String, BookingImpl>();
-		
-		BookingImpl tmp = (BookingImpl)ReservationsystemFactoryImpl.init().createBooking();
-		//Select Flight by ID
-		//Select Seat
-		//Select Passenger 
-		//add payment
-		//Save
-		//show booking
-		
-		
+
+		// BookingImpl tmp =
+		// (BookingImpl)ReservationsystemFactoryImpl.init().createBooking();
+		// Select Flight by ID
+		// print available sflights
+
+		// Select Seat
+		// Select Passenger
+		// add payment
+		// Save
+		// show booking
+
 	}
-	
-	private static void processBooking()
-	{
-		
-		ReservationsystemFactoryImpl.init().createBooking();
+
+	private static final Map<String, PassengerImpl> passengerList;
+	static {
+		passengerList = new HashMap<String, PassengerImpl>();
+
+		createPassenger("Eugenio", "Wenz", "Toronto", new Date(1972, 12, 4),
+				"Canada");
+		createPassenger("Milo", "Deakins", "Montreal", new Date(1982, 4, 1),
+				"Canada");
+		createPassenger("Randy", "Taub", "Ottawa", new Date(1979, 2, 9),
+				"Canada");
+		createPassenger("Roy", "Boyles", "Montreal", new Date(1978, 3, 5),
+				"Canada");
+		createPassenger("Brooks", "Platz", "Toronto", new Date(1983, 6, 5),
+				"Canada");
+		createPassenger("Damian", "Batres", "Montreal", new Date(1982, 8, 8),
+				"Canada");
+		createPassenger("Dave", "Heras", "Toronto", new Date(1980, 8, 5),
+				"Canada");
+		createPassenger("Wilfred", "Knupp", "Ottawa", new Date(1972, 1, 10),
+				"Canada");
+
+	}
+
+	private static PassengerImpl createPassenger(String firstName,
+			String familyName, String address, Date birthDate,
+			String citizenship) {
+		PassengerImpl tmpPassenger;
+		tmpPassenger = (PassengerImpl) ReservationsystemFactoryImpl.init()
+				.createPassenger();
+
+		tmpPassenger.setName(firstName);
+		tmpPassenger.setFamilyName(familyName);
+		tmpPassenger.setAddr(address);
+		tmpPassenger.setBirthDate(birthDate);
+		tmpPassenger.setCitizenship(citizenship);
+		tmpPassenger.setId(passengerList.size() + 1);
+		passengerList.put(Integer.toString(tmpPassenger.getId()), tmpPassenger);
+		return tmpPassenger;
+	}
+
+	private static void processBooking() {
+		BookingImpl tmpBooking = (BookingImpl) ReservationsystemFactoryImpl
+				.init().createBooking();
+		// list flights
+		for (SpecificFlightImpl s : specificFlights.values()) {
+			out.print(s.getId());
+			out.print(" " + s.getGeneralFlight().toString());
+			out.print(" " + s.getDate());
+			out.println();
+			out.flush();
+		}
+		// Select Flight by ID
+		try {
+			String tmpReader = reader.readLine("Enter filght Id to select: ");
+			if (tmpReader != null && !tmpReader.equals("")) {
+
+				SpecificFlightImpl sflight = specificFlights.get(tmpReader);
+				if (sflight != null) {
+					out.println("The flight No. " + tmpReader + " is selected!");
+					out.flush();
+				}
+			}
+		} catch (IOException e) {
+			out.println("exception: " + e.getMessage());
+			out.flush();
+		}
+
+		// list passenger
+		for (PassengerImpl p : passengerList.values()) {
+			out.print(p.getId());
+			out.print(" " + p.toString());
+			out.println();
+			out.flush();
+		}
+
+		// select passenger
+
+		try {
+			String tmpReader = reader
+					.readLine("Enter passenger Id to select: ");
+			if (tmpReader != null && !tmpReader.equals("")) {
+
+				SpecificFlightImpl sflight = specificFlights.get(tmpReader);
+				if (sflight != null) {
+					out.println("The passenger No. " + tmpReader
+							+ " is selected!");
+					out.flush();
+				}
+			}
+		} catch (IOException e) {
+			out.println("exception: " + e.getMessage());
+			out.flush();
+		}
+
+		// Select Seat
+
+		// add payment
+		// Save
+		tmpBooking.setBookNo(Integer.toString(bookings.size()));
+		bookings.put(tmpBooking.getBookNo(), tmpBooking);
+		out.println("Booking Saved..... ");
+		// show booking
+
+		out.println("---- List of Bookings ------ ");
+		for (BookingImpl b : bookings.values()) {
+			out.print(b.getBookNo());
+			out.print(" " + b.toString());
+			out.println();
+			out.flush();
+		}
+		out.println("---- List of Bookings End------ ");
+
 	}
 }
