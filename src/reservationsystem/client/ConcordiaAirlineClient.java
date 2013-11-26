@@ -3,6 +3,7 @@ package reservationsystem.client;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -12,12 +13,14 @@ import java.util.Map;
 import jline.ArgumentCompletor;
 import jline.ConsoleReader;
 import jline.SimpleCompletor;
+import reservationsystem.Seat;
 import reservationsystem.impl.AirportImpl;
 import reservationsystem.impl.BookingImpl;
 import reservationsystem.impl.GeneralFlightImpl;
 import reservationsystem.impl.PassengerImpl;
 import reservationsystem.impl.PersonImpl;
 import reservationsystem.impl.ReservationsystemFactoryImpl;
+import reservationsystem.impl.SeatImpl;
 import reservationsystem.impl.SpecificFlightImpl;
 import reservationsystem.impl.UserImpl;
 import reservationsystem.util.ReservationsystemAdapterFactory;
@@ -29,6 +32,7 @@ public class ConcordiaAirlineClient {
 	private static String username;
 	private static Character mask = '*';
 	private static UserImpl loginUser;
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
 	public enum RealUserType {
 		OPERATOR(1), USER(2);
@@ -82,6 +86,7 @@ public class ConcordiaAirlineClient {
 
 	public static void main(String[] args) throws IOException {
 
+		
 		reader = new ConsoleReader();
 		reader.setBellEnabled(false);
 		reader.setDebug(new PrintWriter(new FileWriter("writer.debug", true)));
@@ -286,17 +291,6 @@ public class ConcordiaAirlineClient {
 	static {
 		bookings = new HashMap<String, BookingImpl>();
 
-		// BookingImpl tmp =
-		// (BookingImpl)ReservationsystemFactoryImpl.init().createBooking();
-		// Select Flight by ID
-		// print available sflights
-
-		// Select Seat
-		// Select Passenger
-		// add payment
-		// Save
-		// show booking
-
 	}
 
 	private static final Map<String, PassengerImpl> passengerList;
@@ -311,14 +305,14 @@ public class ConcordiaAirlineClient {
 				"Canada");
 		createPassenger("Roy", "Boyles", "Montreal", new Date(1978, 3, 5),
 				"Canada");
-		createPassenger("Brooks", "Platz", "Toronto", new Date(1983, 6, 5),
+		/*createPassenger("Brooks", "Platz", "Toronto", new Date(1983, 6, 5),
 				"Canada");
 		createPassenger("Damian", "Batres", "Montreal", new Date(1982, 8, 8),
 				"Canada");
 		createPassenger("Dave", "Heras", "Toronto", new Date(1980, 8, 5),
 				"Canada");
 		createPassenger("Wilfred", "Knupp", "Ottawa", new Date(1972, 1, 10),
-				"Canada");
+				"Canada");*/
 
 	}
 
@@ -345,8 +339,10 @@ public class ConcordiaAirlineClient {
 		// list flights
 		for (SpecificFlightImpl s : specificFlights.values()) {
 			out.print(s.getId());
-			out.print(" " + s.getGeneralFlight().toString());
-			out.print(" " + s.getDate());
+			out.print(" Flight NO (" + s.getGeneralFlight().getFlightNo()+") ");
+			out.print(" From (" + s.getGeneralFlight().getFrom().getName()+") ");
+			out.print(" To (" + s.getGeneralFlight().getTo().getName()+") ");
+			out.print(" " + sdf.format(s.getDate()));
 			out.println();
 			out.flush();
 		}
@@ -357,6 +353,7 @@ public class ConcordiaAirlineClient {
 
 				SpecificFlightImpl sflight = specificFlights.get(tmpReader);
 				if (sflight != null) {
+					tmpBooking.setSpecificFlight(sflight);
 					out.println("The flight No. " + tmpReader + " is selected!");
 					out.flush();
 				}
@@ -369,7 +366,10 @@ public class ConcordiaAirlineClient {
 		// list passenger
 		for (PassengerImpl p : passengerList.values()) {
 			out.print(p.getId());
-			out.print(" " + p.toString());
+			out.print(" Name: " + p.getName()+ " "+ p.getFamilyName());
+			out.print(" Date of Birth " + sdf.format(p.getBirthDate()));
+			out.print("Address: "+ p.getAddr());
+			out.print("Citizenship: "+ p.getCitizenship());
 			out.println();
 			out.flush();
 		}
@@ -381,8 +381,9 @@ public class ConcordiaAirlineClient {
 					.readLine("Enter passenger Id to select: ");
 			if (tmpReader != null && !tmpReader.equals("")) {
 
-				SpecificFlightImpl sflight = specificFlights.get(tmpReader);
-				if (sflight != null) {
+				PassengerImpl p = passengerList.get(tmpReader);
+				if (p != null) {
+					tmpBooking.setPassenger(p);
 					out.println("The passenger No. " + tmpReader
 							+ " is selected!");
 					out.flush();
@@ -394,11 +395,35 @@ public class ConcordiaAirlineClient {
 		}
 
 		// Select Seat
+		
+		try {
+			String tmpReader = reader
+					.readLine("Enter Seat No: ");
+			if (tmpReader != null && !tmpReader.equals("")) {
 
+				SeatImpl s = (SeatImpl)ReservationsystemFactoryImpl.init().createSeat();
+				s.setNo(tmpReader);
+				s.setType(0);
+				if (s != null) {
+					
+					tmpBooking.setSeat(s);
+					out.println("The passenger No. " + tmpReader
+							+ " is selected!");
+					out.flush();
+				}
+			}
+		} catch (IOException e) {
+			out.println("exception: " + e.getMessage());
+			out.flush();
+		}
 		// add payment
+		// Assuming payment is not handled now
+		
 		// Save
-		tmpBooking.setBookNo(Integer.toString(bookings.size()));
+		tmpBooking.setBookNo(Integer.toString(bookings.size()+1));
+		
 		bookings.put(tmpBooking.getBookNo(), tmpBooking);
+		
 		out.println("Booking Saved..... ");
 		// show booking
 

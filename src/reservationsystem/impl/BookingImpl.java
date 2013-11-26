@@ -64,9 +64,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * @generated
      * @ordered
      */
-    protected EList<Passenger> passenger;
+    protected Passenger passenger;
 
-    /**
+    public void setSpecificFlight(SpecificFlight specificFlight) {
+		this.specificFlight = specificFlight;
+	}
+
+	public void setPassenger(Passenger passenger) {
+		this.passenger = passenger;
+	}
+
+	/**
      * The cached value of the '{@link #getSpecificFlight() <em>Specific Flight</em>}' reference list.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -74,7 +82,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * @generated
      * @ordered
      */
-    protected EList<SpecificFlight> specificFlight;
+    protected SpecificFlight specificFlight;
 
     /**
      * The default value of the '{@link #getBookNo() <em>Book No</em>}' attribute.
@@ -124,7 +132,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * @generated
      * @ordered
      */
-    protected EList<Seat> seats;
+    protected Seat seat;
 
     /**
      * The default value of the '{@link #getBaggageInfo() <em>Baggage Info</em>}' attribute.
@@ -182,10 +190,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Passenger> getPassenger() {
-        if (passenger == null) {
-            passenger = new EObjectWithInverseResolvingEList<Passenger>(Passenger.class, this, ReservationsystemPackage.BOOKING__PASSENGER, ReservationsystemPackage.PASSENGER__BOOKING);
-        }
+    public Passenger getPassenger() {        
         return passenger;
     }
 
@@ -194,10 +199,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<SpecificFlight> getSpecificFlight() {
-        if (specificFlight == null) {
-            specificFlight = new EObjectWithInverseResolvingEList.ManyInverse<SpecificFlight>(SpecificFlight.class, this, ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT, ReservationsystemPackage.SPECIFIC_FLIGHT__BOOKING);
-        }
+    public SpecificFlight getSpecificFlight() {
+        
         return specificFlight;
     }
 
@@ -248,12 +251,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
      * <!-- end-user-doc -->
      * @generated
      */
-    public EList<Seat> getSeats() {
-        if (seats == null) {
-            seats = new EObjectWithInverseResolvingEList<Seat>(Seat.class, this, ReservationsystemPackage.BOOKING__SEATS, ReservationsystemPackage.SEAT__BOOK);
-        }
-        return seats;
-    }
+    
 
     /**
      * <!-- begin-user-doc -->
@@ -264,7 +262,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
         return baggageInfo;
     }
 
-    /**
+    public Seat getSeat() {
+		return seat;
+	}
+
+	public void setSeat(Seat seat) {
+		this.seat = seat;
+	}
+
+	/**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -289,8 +295,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
                 return ((InternalEList<InternalEObject>)(InternalEList<?>)getPassenger()).basicAdd(otherEnd, msgs);
             case ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT:
                 return ((InternalEList<InternalEObject>)(InternalEList<?>)getSpecificFlight()).basicAdd(otherEnd, msgs);
-            case ReservationsystemPackage.BOOKING__SEATS:
-                return ((InternalEList<InternalEObject>)(InternalEList<?>)getSeats()).basicAdd(otherEnd, msgs);
+            
         }
         return super.eInverseAdd(otherEnd, featureID, msgs);
     }
@@ -307,8 +312,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
                 return ((InternalEList<?>)getPassenger()).basicRemove(otherEnd, msgs);
             case ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT:
                 return ((InternalEList<?>)getSpecificFlight()).basicRemove(otherEnd, msgs);
-            case ReservationsystemPackage.BOOKING__SEATS:
-                return ((InternalEList<?>)getSeats()).basicRemove(otherEnd, msgs);
+            
         }
         return super.eInverseRemove(otherEnd, featureID, msgs);
     }
@@ -331,8 +335,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
                 return getBookNo();
             case ReservationsystemPackage.BOOKING__BOOKING_STATUS:
                 return getBookingStatus();
-            case ReservationsystemPackage.BOOKING__SEATS:
-                return getSeats();
+            
             case ReservationsystemPackage.BOOKING__BAGGAGE_INFO:
                 return getBaggageInfo();
         }
@@ -352,24 +355,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
                 getPaymentInfo().clear();
                 getPaymentInfo().addAll((Collection<? extends PaymentInfo>)newValue);
                 return;
-            case ReservationsystemPackage.BOOKING__PASSENGER:
-                getPassenger().clear();
-                getPassenger().addAll((Collection<? extends Passenger>)newValue);
-                return;
-            case ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT:
-                getSpecificFlight().clear();
-                getSpecificFlight().addAll((Collection<? extends SpecificFlight>)newValue);
-                return;
+           
+            
             case ReservationsystemPackage.BOOKING__BOOK_NO:
                 setBookNo((String)newValue);
                 return;
             case ReservationsystemPackage.BOOKING__BOOKING_STATUS:
                 setBookingStatus((Integer)newValue);
                 return;
-            case ReservationsystemPackage.BOOKING__SEATS:
-                getSeats().clear();
-                getSeats().addAll((Collection<? extends Seat>)newValue);
-                return;
+            
             case ReservationsystemPackage.BOOKING__BAGGAGE_INFO:
                 setBaggageInfo((String)newValue);
                 return;
@@ -387,22 +381,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
         switch (featureID) {
             case ReservationsystemPackage.BOOKING__PAYMENT_INFO:
                 getPaymentInfo().clear();
-                return;
-            case ReservationsystemPackage.BOOKING__PASSENGER:
-                getPassenger().clear();
-                return;
-            case ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT:
-                getSpecificFlight().clear();
-                return;
+                return;            
             case ReservationsystemPackage.BOOKING__BOOK_NO:
                 setBookNo(BOOK_NO_EDEFAULT);
                 return;
             case ReservationsystemPackage.BOOKING__BOOKING_STATUS:
                 setBookingStatus(BOOKING_STATUS_EDEFAULT);
                 return;
-            case ReservationsystemPackage.BOOKING__SEATS:
-                getSeats().clear();
-                return;
+           
             case ReservationsystemPackage.BOOKING__BAGGAGE_INFO:
                 setBaggageInfo(BAGGAGE_INFO_EDEFAULT);
                 return;
@@ -419,17 +405,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
     public boolean eIsSet(int featureID) {
         switch (featureID) {
             case ReservationsystemPackage.BOOKING__PAYMENT_INFO:
-                return paymentInfo != null && !paymentInfo.isEmpty();
-            case ReservationsystemPackage.BOOKING__PASSENGER:
-                return passenger != null && !passenger.isEmpty();
-            case ReservationsystemPackage.BOOKING__SPECIFIC_FLIGHT:
-                return specificFlight != null && !specificFlight.isEmpty();
+                return paymentInfo != null && !paymentInfo.isEmpty();            
             case ReservationsystemPackage.BOOKING__BOOK_NO:
                 return BOOK_NO_EDEFAULT == null ? bookNo != null : !BOOK_NO_EDEFAULT.equals(bookNo);
             case ReservationsystemPackage.BOOKING__BOOKING_STATUS:
                 return bookingStatus != BOOKING_STATUS_EDEFAULT;
-            case ReservationsystemPackage.BOOKING__SEATS:
-                return seats != null && !seats.isEmpty();
             case ReservationsystemPackage.BOOKING__BAGGAGE_INFO:
                 return BAGGAGE_INFO_EDEFAULT == null ? baggageInfo != null : !BAGGAGE_INFO_EDEFAULT.equals(baggageInfo);
         }
