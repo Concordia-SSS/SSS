@@ -22,8 +22,12 @@ import reservationsystem.impl.PersonImpl;
 import reservationsystem.impl.ReservationsystemFactoryImpl;
 import reservationsystem.impl.SeatImpl;
 import reservationsystem.impl.SpecificFlightImpl;
+import reservationsystem.GeneralFlight;
+import reservationsystem.impl.CrewImpl;
 import reservationsystem.impl.UserImpl;
 import reservationsystem.util.ReservationsystemAdapterFactory;
+
+
 
 @SuppressWarnings("deprecation")
 public class ConcordiaAirlineClient {
@@ -58,7 +62,8 @@ public class ConcordiaAirlineClient {
 		tmp.setUserType(RealUserType.USER.value);
 		usersMap.put("xing", tmp);
 	}
-
+	
+	    
 	private static final Map<String, AirportImpl> airports;
 	static {
 		airports = new HashMap<String, AirportImpl>();
@@ -224,6 +229,88 @@ public class ConcordiaAirlineClient {
 		return;
 
 	}
+	
+	private static void listCrew() throws Exception {
+        for (CrewImpl crew : crews.values()) {
+        	out.println("EmployeeID " + crew.getEmployeeId());
+        	out.println("Name " + crew.getName());
+        	out.println("Middle Name " + crew.getMiddleName());
+        	out.println("Family Name " + crew.getFamilyName());
+        	out.println("Residence " + crew.getResidence());
+        	out.println("Address " + crew.getAddr());
+        	out.println("e-mail " + crew.getEmail());
+        	out.println("Gender" + crew.getGender());
+        	out.println("Birth Date" + crew.getBirthDate());
+        	out.println("ID" + crew.getId());
+        	out.println("Passport number "+ crew.getPassportId());
+        	out.println("Phone Number" + crew.getPhone());
+        	out.println("Citizenship " + crew.getCitizenship());
+            out.println("");
+        }
+        out.flush();
+        return;
+
+    }
+
+    private static void createCrew() throws Exception {
+        if (loginUser.getUserType() != RealUserType.OPERATOR.value) {
+            out.println("illegal command for your user type!");
+            out.flush();
+            return;
+        }
+        String tmp = reader.readLine("Enter the filght No.: ");
+        if (tmp != null && !tmp.equals("")) {
+
+            GeneralFlightImpl gflight = generalFlights.get(tmp);
+            if (gflight != null) {
+                out.println("The flight No. " + tmp + " already exsit!");
+                out.flush();
+                return;
+            }
+            gflight = new GeneralFlightImpl();
+            gflight.setFlightNo(tmp);
+            tmp = reader.readLine("Enter the airport code of departure: ");
+            if (tmp != null && !tmp.equals("")) {
+                AirportImpl ap = airports.get(tmp);
+                if (ap == null) {
+                    out.println("The airport " + tmp + " doesn't exsit!");
+                    out.flush();
+                    return;
+                }
+                gflight.setFrom(ap);
+
+                tmp = reader.readLine("Enter the airport code of destination: ");
+                if (tmp != null && !tmp.equals("")) {
+                    AirportImpl apDest = airports.get(tmp);
+                    if (apDest == null) {
+                        out.println("The airport " + tmp + " doesn't exsit!");
+                        out.flush();
+                        return;
+                    }
+                    gflight.setTo(apDest);
+                    tmp = reader.readLine("Enter the departure time: ");
+                    if (tmp != null && !tmp.equals("")) {
+                        gflight.setDepartureTime(tmp);
+
+                        tmp = reader.readLine("Enter the arrival time: ");
+                        if (tmp != null && !tmp.equals("")) {
+                            gflight.setArrivalTime(tmp);
+                            generalFlights.put(gflight.getFlightNo(), gflight);
+                            out.println("Add general flight success!");
+                            out.flush();
+                            return;
+                        }
+                    }
+
+                }
+
+            }
+        }
+        out.println("error! quit!");
+        out.flush();
+        return;
+
+    }
 
 	private static void printWelcomePage() {
 		out.println("Welcome to Concordia Airline Reservation System!");
@@ -437,4 +524,31 @@ public class ConcordiaAirlineClient {
 		out.println("---- List of Bookings End------ ");
 
 	}
+
+
+
+    
+
+    
+    private static final Map<String, CrewImpl> crews;
+    static {
+    	crews = new HashMap<String, CrewImpl>();
+    	CrewImpl tmp = null;
+    	tmp.setEmployeeId("007");
+    	tmp.setName("Nanda");
+    	tmp.setMiddleName("Li");
+    	tmp.setFamilyName("Jun");
+    	tmp.setResidence("Canada");
+    	tmp.setAddr("7141 Sherbrooke St.");
+    	tmp.setEmail("deng.lijun@encs.concordia.ca");
+    	tmp.setGender(0);
+    	tmp.setBirthDate(null);
+    	tmp.setId(0);
+    	tmp.setPassportId(null);
+    	tmp.setPhone(null);
+    	tmp.setCitizenship("Canadian");
+    	crews.put(tmp.getEmployeeId(),tmp);
+    }
+    
+
 }
