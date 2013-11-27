@@ -455,8 +455,8 @@ public class ConcordiaAirlineClient {
 			out.print(p.getId());
 			out.print(" Name: " + p.getName()+ " "+ p.getFamilyName());
 			out.print(" Date of Birth " + sdf.format(p.getBirthDate()));
-			out.print("Address: "+ p.getAddr());
-			out.print("Citizenship: "+ p.getCitizenship());
+			out.print(" Address: "+ p.getAddr());
+			out.print(" Citizenship: "+ p.getCitizenship());
 			out.println();
 			out.flush();
 		}
@@ -516,8 +516,10 @@ public class ConcordiaAirlineClient {
 
 		out.println("---- List of Bookings ------ ");
 		for (BookingImpl b : bookings.values()) {
-			out.print(b.getBookNo());
-			out.print(" " + b.toString());
+			out.print("Booking No: "+b.getBookNo());
+			out.print(" Name: "+ b.getPassenger().getFamilyName()+", "+ b.getPassenger().getName());
+			out.print(" Flight No: " + b.getSpecificFlight().getGeneralFlight().getFlightNo());
+			out.print(" Seat No: "+b.getSeat().getNo());
 			out.println();
 			out.flush();
 		}
@@ -533,7 +535,7 @@ public class ConcordiaAirlineClient {
     private static final Map<String, CrewImpl> crews;
     static {
     	crews = new HashMap<String, CrewImpl>();
-    	CrewImpl tmp = null;
+    	CrewImpl tmp = new CrewImpl(){};
     	tmp.setEmployeeId("007");
     	tmp.setName("Nanda");
     	tmp.setMiddleName("Li");
