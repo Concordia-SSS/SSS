@@ -357,7 +357,7 @@ public class ConcordiaAirlineClient {
 
 		out.println("|createbooking - start booking process");
 		out.println("|listbookings - list existing bookings");
-
+		out.println("| press tab to autocomplete   ");
 		out.println("----- End Command Help -------");
 		out.flush();
 
@@ -538,9 +538,10 @@ public class ConcordiaAirlineClient {
 					+ b.getSpecificFlight().getGeneralFlight().getFlightNo());
 			out.print(" Seat No: " + b.getSeat().getNo());
 			out.println();
-			out.flush();
+			
 		}
 		out.println("---- List of Bookings End------ ");
+		out.flush();
 	}
 
 	private static final Map<String, CrewImpl> crews;
