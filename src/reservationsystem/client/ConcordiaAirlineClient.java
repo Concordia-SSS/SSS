@@ -151,7 +151,7 @@ public class ConcordiaAirlineClient {
 
         printCommandHelp();
 
-        while ((line = reader.readLine("ConcordiaAirline> ")) != null) {
+        while ((line = reader.readLine("\033[1;33mConcordiaAirline\033[0m> ")) != null) {
             try {
 
                 if (line.trim().equalsIgnoreCase("quit") || line.trim().equalsIgnoreCase("exit")) {
