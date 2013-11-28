@@ -27,8 +27,6 @@ import reservationsystem.impl.CrewImpl;
 import reservationsystem.impl.UserImpl;
 import reservationsystem.util.ReservationsystemAdapterFactory;
 
-
-
 @SuppressWarnings("deprecation")
 public class ConcordiaAirlineClient {
 	private static PrintWriter out;
@@ -62,8 +60,7 @@ public class ConcordiaAirlineClient {
 		tmp.setUserType(RealUserType.USER.value);
 		usersMap.put("xing", tmp);
 	}
-	
-	    
+
 	private static final Map<String, AirportImpl> airports;
 	static {
 		airports = new HashMap<String, AirportImpl>();
@@ -91,7 +88,6 @@ public class ConcordiaAirlineClient {
 
 	public static void main(String[] args) throws IOException {
 
-		
 		reader = new ConsoleReader();
 		reader.setBellEnabled(false);
 		reader.setDebug(new PrintWriter(new FileWriter("writer.debug", true)));
@@ -140,15 +136,17 @@ public class ConcordiaAirlineClient {
 
 					} else if (line.equalsIgnoreCase("createbooking")) {
 						processBooking();
-					} 
-				} else if (line.equalsIgnoreCase("listbookings")) {
+					} else if (line.equalsIgnoreCase("listbookings")) {
 						listBookings();
-					} 
-					else {
+					} else {
 						out.println("No such command: \"" + line + "\"");
 						out.flush();
 					}
-				
+				} else {
+					out.println("No such command: \"" + line + "\"");
+					out.flush();
+				}
+
 			} catch (Exception e) {
 				out.println("exception: " + e.getMessage());
 				out.flush();
@@ -233,88 +231,89 @@ public class ConcordiaAirlineClient {
 		return;
 
 	}
-	
+
 	private static void listCrew() throws Exception {
-        for (CrewImpl crew : crews.values()) {
-        	out.println("EmployeeID " + crew.getEmployeeId());
-        	out.println("Name " + crew.getName());
-        	out.println("Middle Name " + crew.getMiddleName());
-        	out.println("Family Name " + crew.getFamilyName());
-        	out.println("Residence " + crew.getResidence());
-        	out.println("Address " + crew.getAddr());
-        	out.println("e-mail " + crew.getEmail());
-        	out.println("Gender" + crew.getGender());
-        	out.println("Birth Date" + crew.getBirthDate());
-        	out.println("ID" + crew.getId());
-        	out.println("Passport number "+ crew.getPassportId());
-        	out.println("Phone Number" + crew.getPhone());
-        	out.println("Citizenship " + crew.getCitizenship());
-            out.println("");
-        }
-        out.flush();
-        return;
+		for (CrewImpl crew : crews.values()) {
+			out.println("EmployeeID " + crew.getEmployeeId());
+			out.println("Name " + crew.getName());
+			out.println("Middle Name " + crew.getMiddleName());
+			out.println("Family Name " + crew.getFamilyName());
+			out.println("Residence " + crew.getResidence());
+			out.println("Address " + crew.getAddr());
+			out.println("e-mail " + crew.getEmail());
+			out.println("Gender" + crew.getGender());
+			out.println("Birth Date" + crew.getBirthDate());
+			out.println("ID" + crew.getId());
+			out.println("Passport number " + crew.getPassportId());
+			out.println("Phone Number" + crew.getPhone());
+			out.println("Citizenship " + crew.getCitizenship());
+			out.println("");
+		}
+		out.flush();
+		return;
 
-    }
+	}
 
-    private static void createCrew() throws Exception {
-        if (loginUser.getUserType() != RealUserType.OPERATOR.value) {
-            out.println("illegal command for your user type!");
-            out.flush();
-            return;
-        }
-        String tmp = reader.readLine("Enter the filght No.: ");
-        if (tmp != null && !tmp.equals("")) {
+	private static void createCrew() throws Exception {
+		if (loginUser.getUserType() != RealUserType.OPERATOR.value) {
+			out.println("illegal command for your user type!");
+			out.flush();
+			return;
+		}
+		String tmp = reader.readLine("Enter the filght No.: ");
+		if (tmp != null && !tmp.equals("")) {
 
-            GeneralFlightImpl gflight = generalFlights.get(tmp);
-            if (gflight != null) {
-                out.println("The flight No. " + tmp + " already exsit!");
-                out.flush();
-                return;
-            }
-            gflight = new GeneralFlightImpl();
-            gflight.setFlightNo(tmp);
-            tmp = reader.readLine("Enter the airport code of departure: ");
-            if (tmp != null && !tmp.equals("")) {
-                AirportImpl ap = airports.get(tmp);
-                if (ap == null) {
-                    out.println("The airport " + tmp + " doesn't exsit!");
-                    out.flush();
-                    return;
-                }
-                gflight.setFrom(ap);
+			GeneralFlightImpl gflight = generalFlights.get(tmp);
+			if (gflight != null) {
+				out.println("The flight No. " + tmp + " already exsit!");
+				out.flush();
+				return;
+			}
+			gflight = new GeneralFlightImpl();
+			gflight.setFlightNo(tmp);
+			tmp = reader.readLine("Enter the airport code of departure: ");
+			if (tmp != null && !tmp.equals("")) {
+				AirportImpl ap = airports.get(tmp);
+				if (ap == null) {
+					out.println("The airport " + tmp + " doesn't exsit!");
+					out.flush();
+					return;
+				}
+				gflight.setFrom(ap);
 
-                tmp = reader.readLine("Enter the airport code of destination: ");
-                if (tmp != null && !tmp.equals("")) {
-                    AirportImpl apDest = airports.get(tmp);
-                    if (apDest == null) {
-                        out.println("The airport " + tmp + " doesn't exsit!");
-                        out.flush();
-                        return;
-                    }
-                    gflight.setTo(apDest);
-                    tmp = reader.readLine("Enter the departure time: ");
-                    if (tmp != null && !tmp.equals("")) {
-                        gflight.setDepartureTime(tmp);
+				tmp = reader
+						.readLine("Enter the airport code of destination: ");
+				if (tmp != null && !tmp.equals("")) {
+					AirportImpl apDest = airports.get(tmp);
+					if (apDest == null) {
+						out.println("The airport " + tmp + " doesn't exsit!");
+						out.flush();
+						return;
+					}
+					gflight.setTo(apDest);
+					tmp = reader.readLine("Enter the departure time: ");
+					if (tmp != null && !tmp.equals("")) {
+						gflight.setDepartureTime(tmp);
 
-                        tmp = reader.readLine("Enter the arrival time: ");
-                        if (tmp != null && !tmp.equals("")) {
-                            gflight.setArrivalTime(tmp);
-                            generalFlights.put(gflight.getFlightNo(), gflight);
-                            out.println("Add general flight success!");
-                            out.flush();
-                            return;
-                        }
-                    }
+						tmp = reader.readLine("Enter the arrival time: ");
+						if (tmp != null && !tmp.equals("")) {
+							gflight.setArrivalTime(tmp);
+							generalFlights.put(gflight.getFlightNo(), gflight);
+							out.println("Add general flight success!");
+							out.flush();
+							return;
+						}
+					}
 
-                }
+				}
 
-            }
-        }
-        out.println("error! quit!");
-        out.flush();
-        return;
+			}
+		}
+		out.println("error! quit!");
+		out.flush();
+		return;
 
-    }
+	}
 
 	private static void printWelcomePage() {
 		out.println("Welcome to Concordia Airline Reservation System!");
@@ -355,10 +354,10 @@ public class ConcordiaAirlineClient {
 		out.println("| Command | Param | Usage     |");
 		out.println("| exit - exit from application|");
 		out.println("| quit - exit from application|");
-		
+
 		out.println("|createbooking - start booking process");
 		out.println("|listbookings - list existing bookings");
-		
+
 		out.println("----- End Command Help -------");
 		out.flush();
 
@@ -399,14 +398,14 @@ public class ConcordiaAirlineClient {
 				"Canada");
 		createPassenger("Roy", "Boyles", "Montreal", new Date(1978, 3, 5),
 				"Canada");
-		/*createPassenger("Brooks", "Platz", "Toronto", new Date(1983, 6, 5),
-				"Canada");
-		createPassenger("Damian", "Batres", "Montreal", new Date(1982, 8, 8),
-				"Canada");
-		createPassenger("Dave", "Heras", "Toronto", new Date(1980, 8, 5),
-				"Canada");
-		createPassenger("Wilfred", "Knupp", "Ottawa", new Date(1972, 1, 10),
-				"Canada");*/
+		/*
+		 * createPassenger("Brooks", "Platz", "Toronto", new Date(1983, 6, 5),
+		 * "Canada"); createPassenger("Damian", "Batres", "Montreal", new
+		 * Date(1982, 8, 8), "Canada"); createPassenger("Dave", "Heras",
+		 * "Toronto", new Date(1980, 8, 5), "Canada");
+		 * createPassenger("Wilfred", "Knupp", "Ottawa", new Date(1972, 1, 10),
+		 * "Canada");
+		 */
 
 	}
 
@@ -433,9 +432,11 @@ public class ConcordiaAirlineClient {
 		// list flights
 		for (SpecificFlightImpl s : specificFlights.values()) {
 			out.print(s.getId());
-			out.print(" Flight NO (" + s.getGeneralFlight().getFlightNo()+") ");
-			out.print(" From (" + s.getGeneralFlight().getFrom().getName()+") ");
-			out.print(" To (" + s.getGeneralFlight().getTo().getName()+") ");
+			out.print(" Flight NO (" + s.getGeneralFlight().getFlightNo()
+					+ ") ");
+			out.print(" From (" + s.getGeneralFlight().getFrom().getName()
+					+ ") ");
+			out.print(" To (" + s.getGeneralFlight().getTo().getName() + ") ");
 			out.print(" " + sdf.format(s.getDate()));
 			out.println();
 			out.flush();
@@ -460,10 +461,10 @@ public class ConcordiaAirlineClient {
 		// list passenger
 		for (PassengerImpl p : passengerList.values()) {
 			out.print(p.getId());
-			out.print(" Name: " + p.getName()+ " "+ p.getFamilyName());
+			out.print(" Name: " + p.getName() + " " + p.getFamilyName());
 			out.print(" Date of Birth " + sdf.format(p.getBirthDate()));
-			out.print(" Address: "+ p.getAddr());
-			out.print(" Citizenship: "+ p.getCitizenship());
+			out.print(" Address: " + p.getAddr());
+			out.print(" Citizenship: " + p.getCitizenship());
 			out.println();
 			out.flush();
 		}
@@ -489,17 +490,17 @@ public class ConcordiaAirlineClient {
 		}
 
 		// Select Seat
-		
+
 		try {
-			String tmpReader = reader
-					.readLine("Enter Seat No: ");
+			String tmpReader = reader.readLine("Enter Seat No: ");
 			if (tmpReader != null && !tmpReader.equals("")) {
 
-				SeatImpl s = (SeatImpl)ReservationsystemFactoryImpl.init().createSeat();
+				SeatImpl s = (SeatImpl) ReservationsystemFactoryImpl.init()
+						.createSeat();
 				s.setNo(tmpReader);
 				s.setType(0);
 				if (s != null) {
-					
+
 					tmpBooking.setSeat(s);
 					out.println("The passenger No. " + tmpReader
 							+ " is selected!");
@@ -512,12 +513,12 @@ public class ConcordiaAirlineClient {
 		}
 		// add payment
 		// Assuming payment is not handled now
-		
+
 		// Save
-		tmpBooking.setBookNo(Integer.toString(bookings.size()+1));
-		
+		tmpBooking.setBookNo(Integer.toString(bookings.size() + 1));
+
 		bookings.put(tmpBooking.getBookNo(), tmpBooking);
-		
+
 		out.println("Booking Saved..... ");
 		// show booking
 
@@ -526,42 +527,41 @@ public class ConcordiaAirlineClient {
 
 	}
 
-	private static void listBookings()
-	{
+	private static void listBookings() {
 		out.println("---- List of Bookings ------ ");
+
 		for (BookingImpl b : bookings.values()) {
-			out.print("Booking No: "+b.getBookNo());
-			out.print(" Name: "+ b.getPassenger().getFamilyName()+", "+ b.getPassenger().getName());
-			out.print(" Flight No: " + b.getSpecificFlight().getGeneralFlight().getFlightNo());
-			out.print(" Seat No: "+b.getSeat().getNo());
+			out.print("Booking No: " + b.getBookNo());
+			out.print(" Name: " + b.getPassenger().getFamilyName() + ", "
+					+ b.getPassenger().getName());
+			out.print(" Flight No: "
+					+ b.getSpecificFlight().getGeneralFlight().getFlightNo());
+			out.print(" Seat No: " + b.getSeat().getNo());
 			out.println();
 			out.flush();
 		}
 		out.println("---- List of Bookings End------ ");
 	}
 
-    
-
-    
-    private static final Map<String, CrewImpl> crews;
-    static {
-    	crews = new HashMap<String, CrewImpl>();
-    	CrewImpl tmp = new CrewImpl(){};
-    	tmp.setEmployeeId("007");
-    	tmp.setName("Nanda");
-    	tmp.setMiddleName("Li");
-    	tmp.setFamilyName("Jun");
-    	tmp.setResidence("Canada");
-    	tmp.setAddr("7141 Sherbrooke St.");
-    	tmp.setEmail("deng.lijun@encs.concordia.ca");
-    	tmp.setGender(0);
-    	tmp.setBirthDate(null);
-    	tmp.setId(0);
-    	tmp.setPassportId(null);
-    	tmp.setPhone(null);
-    	tmp.setCitizenship("Canadian");
-    	crews.put(tmp.getEmployeeId(),tmp);
-    }
-    
+	private static final Map<String, CrewImpl> crews;
+	static {
+		crews = new HashMap<String, CrewImpl>();
+		CrewImpl tmp = new CrewImpl() {
+		};
+		tmp.setEmployeeId("007");
+		tmp.setName("Nanda");
+		tmp.setMiddleName("Li");
+		tmp.setFamilyName("Jun");
+		tmp.setResidence("Canada");
+		tmp.setAddr("7141 Sherbrooke St.");
+		tmp.setEmail("deng.lijun@encs.concordia.ca");
+		tmp.setGender(0);
+		tmp.setBirthDate(null);
+		tmp.setId(0);
+		tmp.setPassportId(null);
+		tmp.setPhone(null);
+		tmp.setCitizenship("Canadian");
+		crews.put(tmp.getEmployeeId(), tmp);
+	}
 
 }
