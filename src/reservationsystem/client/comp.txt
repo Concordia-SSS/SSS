@@ -1,4 +1,7 @@
-addGeneralFlight
-try
-listbookings
-createbooking
+list general flights
+create booking
+list bookings
+list crew
+create crew
+list passenger
+create passenger

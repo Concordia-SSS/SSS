@@ -86,6 +86,48 @@ public class ConcordiaAirlineClient {
 		generalFlights.put(tmp11.getFlightNo(), tmp11);
 	}
 
+	private static final Map<String, CrewImpl> crews;
+	static {
+		crews = new HashMap<String, CrewImpl>();
+		CrewImpl tmp = (CrewImpl) ReservationsystemFactoryImpl.init()
+				.createPilot();
+		tmp.setEmployeeId("007");
+		tmp.setName("Nanda");
+		tmp.setMiddleName("Li");
+		tmp.setFamilyName("Jun");
+		tmp.setResidence("Canada");
+		tmp.setAddr("7141 Sherbrooke St.");
+		tmp.setEmail("deng.lijun@encs.concordia.ca");
+		tmp.setGender(0);
+		tmp.setBirthDate(null);
+		// tmp.setId(0);
+		tmp.setPassportId(null);
+		tmp.setPhone(null);
+		tmp.setCitizenship("Canadian");
+		crews.put(tmp.getEmployeeId(), tmp);
+	}
+
+	private static final Map<String, PassengerImpl> passengers;
+	static {
+		passengers = new HashMap<String, PassengerImpl>();
+		PassengerImpl tmp = new PassengerImpl();
+		// tmp.setId(0);
+		// tmp.setEmployeeId("007");
+		tmp.setName("Nanda");
+		tmp.setMiddleName("Li");
+		tmp.setFamilyName("Jun");
+		tmp.setResidence("Canada");
+		tmp.setAddr("7141 Sherbrooke St.");
+		tmp.setEmail("deng.lijun@encs.concordia.ca");
+		tmp.setGender(0);
+		tmp.setBirthDate(null);
+		// tmp.setId(0);
+		tmp.setPassportId(null);
+		tmp.setPhone(null);
+		tmp.setCitizenship("Canadian");
+		passengers.put(tmp.getName(), tmp);
+	}
+
 	public static void main(String[] args) throws IOException {
 
 		reader = new ConsoleReader();
@@ -132,21 +174,25 @@ public class ConcordiaAirlineClient {
 					}
 
 				} else if (loginUser.getUserType() == RealUserType.USER.value) {
-					if (line.equalsIgnoreCase("listFlight")) {
-
-					} else if (line.equalsIgnoreCase("createbooking")) {
+					if (line.equalsIgnoreCase("list general flights")) {
+						listGeneralFlight();
+					} else if (line.equalsIgnoreCase("create booking")) {
 						processBooking();
-					} else if (line.equalsIgnoreCase("listbookings")) {
+					} else if (line.equalsIgnoreCase("list bookings")) {
 						listBookings();
+					} else if (line.equalsIgnoreCase("list crew")) {
+						listCrew();
+					} else if (line.equalsIgnoreCase("create crew")) {
+						createCrew();
+					} else if (line.equalsIgnoreCase("list passenger")) {
+						listPassenger();
+					} else if (line.equalsIgnoreCase("create passenger")) {
+						createPassenger();
 					} else {
 						out.println("No such command: \"" + line + "\"");
 						out.flush();
 					}
-				} else {
-					out.println("No such command: \"" + line + "\"");
-					out.flush();
 				}
-
 			} catch (Exception e) {
 				out.println("exception: " + e.getMessage());
 				out.flush();
@@ -255,64 +301,70 @@ public class ConcordiaAirlineClient {
 	}
 
 	private static void createCrew() throws Exception {
-		if (loginUser.getUserType() != RealUserType.OPERATOR.value) {
+		if (loginUser.getUserType() != RealUserType.USER.value) {
 			out.println("illegal command for your user type!");
 			out.flush();
 			return;
 		}
-		String tmp = reader.readLine("Enter the filght No.: ");
+		String tmp = reader.readLine("EmployeeID: ");
 		if (tmp != null && !tmp.equals("")) {
+			CrewImpl crew = crews.get(tmp);
 
-			GeneralFlightImpl gflight = generalFlights.get(tmp);
-			if (gflight != null) {
-				out.println("The flight No. " + tmp + " already exsit!");
+			if (crew != null) {
+				out.println("The EmployeeID. " + tmp + " already exsit!");
 				out.flush();
 				return;
 			}
-			gflight = new GeneralFlightImpl();
-			gflight.setFlightNo(tmp);
-			tmp = reader.readLine("Enter the airport code of departure: ");
+			crew = (CrewImpl) ReservationsystemFactoryImpl.init().createPilot();
+
+			tmp = reader.readLine("Enter Crew First Name: ");
 			if (tmp != null && !tmp.equals("")) {
-				AirportImpl ap = airports.get(tmp);
-				if (ap == null) {
-					out.println("The airport " + tmp + " doesn't exsit!");
-					out.flush();
-					return;
-				}
-				gflight.setFrom(ap);
-
-				tmp = reader
-						.readLine("Enter the airport code of destination: ");
-				if (tmp != null && !tmp.equals("")) {
-					AirportImpl apDest = airports.get(tmp);
-					if (apDest == null) {
-						out.println("The airport " + tmp + " doesn't exsit!");
-						out.flush();
-						return;
-					}
-					gflight.setTo(apDest);
-					tmp = reader.readLine("Enter the departure time: ");
-					if (tmp != null && !tmp.equals("")) {
-						gflight.setDepartureTime(tmp);
-
-						tmp = reader.readLine("Enter the arrival time: ");
-						if (tmp != null && !tmp.equals("")) {
-							gflight.setArrivalTime(tmp);
-							generalFlights.put(gflight.getFlightNo(), gflight);
-							out.println("Add general flight success!");
-							out.flush();
-							return;
-						}
-					}
-
-				}
-
+				crew.setName(tmp);
 			}
+
+			tmp = reader.readLine("Enter Crew Middle Name: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setMiddleName(tmp);
+			}
+
+			tmp = reader.readLine("Enter Crew Family Name: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setFamilyName(tmp);
+			}
+
+			tmp = reader.readLine("Enter Residence: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setResidence(tmp);
+			}
+
+			tmp = reader.readLine("Enter address: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setAddr(tmp);
+			}
+			tmp = reader.readLine("Enter e-mail: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setEmail(tmp);
+			}
+
+			tmp = reader.readLine("Enter Phone: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setPhone(tmp);
+			}
+
+			tmp = reader.readLine("Enter Citizenship: ");
+			if (tmp != null && !tmp.equals("")) {
+				crew.setCitizenship(tmp);
+			}
+
+			crews.put(crew.getEmployeeId(), crew);
+			out.println("Add Crew success!");
+			out.flush();
+			return;
+
 		}
 		out.println("error! quit!");
 		out.flush();
 		return;
-
 	}
 
 	private static void printWelcomePage() {
@@ -350,15 +402,26 @@ public class ConcordiaAirlineClient {
 	// Ashis Starts Working From Here for Booking
 
 	private static void printCommandHelp() {
-		out.println("-------- Command Help --------");
+		out.println("|*****************************|");
+		out.println("|------- Command Help --------|");
+		out.println("|*****************************|");
 		out.println("| Command | Param | Usage     |");
+		out.println("|-----------------------------|");
 		out.println("| exit - exit from application|");
 		out.println("| quit - exit from application|");
-
-		out.println("|createbooking - start booking process");
-		out.println("|listbookings - list existing bookings");
-		out.println("| press tab to autocomplete   ");
-		out.println("----- End Command Help -------");
+		out.println("| list general flights        |");
+		out.println("| create booking              |");
+		out.println("| list bookings               |");
+		out.println("| list crew                   |");
+		out.println("| create crew                 |");
+		out.println("| list passenger              |");
+		out.println("| create passenger            |");
+		out.println("|_____________________________|");
+		out.println("| press tab to autocomplete   |");
+		out.println("|_____________________________|");
+		out.println("|*****************************|");
+		out.println("|---- End Command Help -------|");
+		out.println("|*****************************|");
 		out.flush();
 
 	}
@@ -538,31 +601,105 @@ public class ConcordiaAirlineClient {
 					+ b.getSpecificFlight().getGeneralFlight().getFlightNo());
 			out.print(" Seat No: " + b.getSeat().getNo());
 			out.println();
-			
+
 		}
 		out.println("---- List of Bookings End------ ");
 		out.flush();
 	}
 
-	private static final Map<String, CrewImpl> crews;
-	static {
-		crews = new HashMap<String, CrewImpl>();
-		CrewImpl tmp = new CrewImpl() {
-		};
-		tmp.setEmployeeId("007");
-		tmp.setName("Nanda");
-		tmp.setMiddleName("Li");
-		tmp.setFamilyName("Jun");
-		tmp.setResidence("Canada");
-		tmp.setAddr("7141 Sherbrooke St.");
-		tmp.setEmail("deng.lijun@encs.concordia.ca");
-		tmp.setGender(0);
-		tmp.setBirthDate(null);
-		tmp.setId(0);
-		tmp.setPassportId(null);
-		tmp.setPhone(null);
-		tmp.setCitizenship("Canadian");
-		crews.put(tmp.getEmployeeId(), tmp);
+	// Lincon's Code
+
+	private static void listPassenger() throws Exception {
+		for (PassengerImpl passenger : passengers.values()) {
+			// out.println("EmployeeID  : " + passenger.getEmployeeId());
+			out.println("Name        : " + passenger.getName());
+			out.println("Middle Name : " + passenger.getMiddleName());
+			out.println("Family Name : " + passenger.getFamilyName());
+			out.println("Residence   : " + passenger.getResidence());
+			out.println("Address     : " + passenger.getAddr());
+			out.println("e-mail      : " + passenger.getEmail());
+			out.println("Gender      : " + passenger.getGender());
+			out.println("Birth Date  : " + passenger.getBirthDate());
+			out.println("ID          : " + passenger.getId());
+			out.println("Passport number : " + passenger.getPassportId());
+			out.println("Phone Number    : " + passenger.getPhone());
+			out.println("Citizenship     :" + passenger.getCitizenship());
+			out.println("");
+		}
+		out.flush();
+		return;
+
+	}
+
+	private static void createPassenger() throws Exception {
+		if (loginUser.getUserType() != RealUserType.USER.value) {
+			out.println("illegal command for your user type!");
+			out.flush();
+			return;
+		}
+		String tmp = reader.readLine("Enter Passenger ID: ");
+		if (tmp != null && !tmp.equals("")) {
+			PassengerImpl passenger = passengers.get(tmp);
+
+			if (passenger != null) {
+				out.println("The PassengerID. " + tmp + " already exsit!");
+				out.flush();
+				return;
+			}
+			int temp = Integer.parseInt(tmp);
+			passenger = new PassengerImpl();
+			passenger.setId(temp);
+
+			tmp = reader.readLine("Enter Passenger First Name: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setName(tmp);
+			}
+
+			tmp = reader.readLine("Enter Passenger Middle Name: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setMiddleName(tmp);
+			}
+
+			tmp = reader.readLine("Enter Passenger Family Name: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setFamilyName(tmp);
+			}
+
+			tmp = reader.readLine("Enter Residence: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setResidence(tmp);
+			}
+
+			tmp = reader.readLine("Enter address: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setAddr(tmp);
+			}
+			tmp = reader.readLine("Enter e-mail: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setEmail(tmp);
+			}
+
+			tmp = reader.readLine("Enter Phone: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setPhone(tmp);
+			}
+
+			tmp = reader.readLine("Enter Citizenship: ");
+			if (tmp != null && !tmp.equals("")) {
+				passenger.setCitizenship(tmp);
+			}
+			temp = passenger.getId();
+			tmp = Integer.toString(temp);
+			passengers.put(tmp, passenger);
+			out.println("Add Passenger successfuly!");
+			out.flush();
+			return;
+
+		}
+		out.println("error! quit!");
+		out.flush();
+		return;
+
 	}
 
 }

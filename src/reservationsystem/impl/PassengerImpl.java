@@ -96,7 +96,7 @@ public class PassengerImpl extends PersonImpl implements Passenger {
      * <!-- end-user-doc -->
      * @generated
      */
-    protected PassengerImpl() {
+    public PassengerImpl() {
         super();
     }
 
