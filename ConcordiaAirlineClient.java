@@ -152,7 +152,7 @@ public class ConcordiaAirlineClient {
                 if (loginUser.getUserType() == RealUserType.OPERATOR.value) {
                     if (line.equalsIgnoreCase("create general flight")) {
                         createGeneralFlight();
-                    } else if (line.equalsIgnoreCase("list general flights")) {
+                    } else if (line.equalsIgnoreCase("listGeneralFlights")) {
                         listGeneralFlight();
                     } else {
                         out.println("No such command: \"" + line + "\"");
@@ -163,13 +163,13 @@ public class ConcordiaAirlineClient {
                     if (line.equalsIgnoreCase("listFlight")) {
                         out.println("listFlight");
                         out.flush();
-                    } else if (line.equalsIgnoreCase("list crew")) {
+                    } else if (line.equalsIgnoreCase("listCrew")) {
                     	listCrew();
-                    } else if (line.equalsIgnoreCase("create crew")) {
+                    } else if (line.equalsIgnoreCase("createCrew")) {
                     	createCrew();
-                    } else if (line.equalsIgnoreCase("list passenger")) {
+                    } else if (line.equalsIgnoreCase("listPassenger")) {
                     	listPassenger();
-                    } else if (line.equalsIgnoreCase("create passenger")) {
+                    } else if (line.equalsIgnoreCase("createPassenger")) {
                     	createPassenger();
                     } else {
                         out.println("No such command: \"" + line + "\"");

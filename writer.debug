@@ -1,2 +1,31 @@
 Completing (pos=0) with: [addGeneralFlight, try]: offset=0
 Completing addGe(pos=5) with: [addGeneralFlight ]: offset=0
+Completing (pos=0) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=0
+Completing (pos=0) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=0
+Completing li(pos=2) with: [list ]: offset=0
+Completing list (pos=5) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=5
+Completing list (pos=5) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=5
+Completing list (pos=5) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=5
+Completing list (pos=5) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=5
+Completing list bo(pos=7) with: [booking, bookings]: offset=5
+Completing list bookings(pos=13) with: [bookings ]: offset=5
+Completing list bookings (pos=14) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=14
+Completing (pos=0) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=0
+Completing (pos=0) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=0
+Completing bo(pos=2) with: [booking, bookings]: offset=0
+Completing cre(pos=3) with: [create, crew]: offset=0
+Completing create (pos=7) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=7
+Completing create gen(pos=10) with: [general ]: offset=7
+Completing create general (pos=15) with: [booking, bookings, create, crew, exit, flights, general, help, list, passenger, quit]: offset=15
+Completing create general fli(pos=18) with: [flights ]: offset=15
+Completing (pos=0) with: [createBooking, createPassenger, exit, help, listBookings, listPassenger, quit]: offset=0
+Completing (pos=0) with: [createBooking, createPassenger, exit, help, listBookings, listPassenger, quit]: offset=0
+Completing cre(pos=3) with: [createBooking, createPassenger]: offset=0
+Completing createB(pos=7) with: [createBooking ]: offset=0
+Completing (pos=0) with: [createBooking, createPassenger, exit, help, listBookings, listPassenger, quit]: offset=0
+Completing cre(pos=3) with: [createBooking, createPassenger]: offset=0
+Completing createP(pos=7) with: [createPassenger ]: offset=0
+Completing listP(pos=5) with: [listPassenger ]: offset=0
+Completing (pos=0) with: [createBooking, createPassenger, exit, help, listBookings, listPassenger, quit]: offset=0
+Completing (pos=0) with: [createBooking, createPassenger, exit, help, listBookings, listPassenger, quit]: offset=0
+Completing listBo(pos=6) with: [listBookings ]: offset=0

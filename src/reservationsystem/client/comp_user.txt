@@ -1,9 +1,5 @@
-listGeneralFlights
-createGeneralFlight
 createBooking
 listBookings
-listCrew
-createCrew
 listPassenger
 createPassenger
 help
