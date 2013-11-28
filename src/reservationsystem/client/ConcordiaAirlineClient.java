@@ -140,11 +140,15 @@ public class ConcordiaAirlineClient {
 
 					} else if (line.equalsIgnoreCase("createbooking")) {
 						processBooking();
-					} else {
+					} 
+				} else if (line.equalsIgnoreCase("listbookings")) {
+						listBookings();
+					} 
+					else {
 						out.println("No such command: \"" + line + "\"");
 						out.flush();
 					}
-				}
+				
 			} catch (Exception e) {
 				out.println("exception: " + e.getMessage());
 				out.flush();
@@ -351,7 +355,10 @@ public class ConcordiaAirlineClient {
 		out.println("| Command | Param | Usage     |");
 		out.println("| exit - exit from application|");
 		out.println("| quit - exit from application|");
+		
 		out.println("|createbooking - start booking process");
+		out.println("|listbookings - list existing bookings");
+		
 		out.println("----- End Command Help -------");
 		out.flush();
 
@@ -514,6 +521,13 @@ public class ConcordiaAirlineClient {
 		out.println("Booking Saved..... ");
 		// show booking
 
+		listBookings();
+		printCommandHelp();
+
+	}
+
+	private static void listBookings()
+	{
 		out.println("---- List of Bookings ------ ");
 		for (BookingImpl b : bookings.values()) {
 			out.print("Booking No: "+b.getBookNo());
@@ -524,10 +538,7 @@ public class ConcordiaAirlineClient {
 			out.flush();
 		}
 		out.println("---- List of Bookings End------ ");
-
 	}
-
-
 
     
 
